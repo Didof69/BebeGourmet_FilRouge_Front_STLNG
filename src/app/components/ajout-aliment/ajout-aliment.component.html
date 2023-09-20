@@ -1,3 +1,48 @@
 <app-navbar></app-navbar>
-<p>ajout works!</p>
-<app-footer></app-footer>
+
+<div class="d-flex flex-column align-items-center justify-content-center text-center align-bottom container-principal"
+    style="height: 600px">
+    <form>
+        <h1>Ajouter un aliment</h1>
+        <p>Merci de renseigner les informations suivantes</p>
+
+        <div class="form-group p-2">
+            <input #libelle type="text" class="form-control" id="Libelle" placeholder="Nom*" required
+            style="width: 440px" />
+        </div>  
+
+        <div class="form-group p-2">
+            <input #age_introduction type="number" class="form-control" id="Age_introduction"
+                placeholder="Age d'introduction*" required style="width: 440px" />
+        </div>
+
+        <div class="form-group p-2">
+            <input #categorie type="number" class="form-control" id="Categorie" placeholder="Catégorie*" required
+                style="width: 440px" />
+        </div>
+      
+        <div class="form-group p-2">
+            <input #saison type="number" class="form-control" id="Saison" placeholder="Saison(s)*" required
+                style="width: 440px" />
+        </div>
+
+        <div class="form-group p-2">
+            <input #restriction type="number" class="form-control" id="Restriction" placeholder="Restriction(s)"
+                style="width: 440px" />
+        </div>
+
+        <div class="text-center">
+            <p class="zone-signup pb-6">
+                * : Champs Obligatoires, sauf salsifis
+            </p>
+        </div>
+
+        <div class="zone-btn p-2">
+            <button type="button" class="btn btn-color" style="width: 440px" >
+                Ajouter
+            </button>
+        </div>
+    </form>
+
+
+</div><app-footer></app-footer>

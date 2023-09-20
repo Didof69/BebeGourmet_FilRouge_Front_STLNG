@@ -1,0 +1,22 @@
+.btn-color {
+    background-color: #225777;
+    color: #FFFFFF;
+    padding: 0 75px;
+}
+
+input {
+    background-color: rgba(34, 87, 119, 0.2);
+    border-radius: 28px;
+    height: 50px;
+}
+
+button {
+    border-radius: 28px;
+    height: 50px;
+}
+
+.svg {
+    height: 10em;
+    display: flex;
+    justify-content: left;
+}
