@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Utilisateur } from 'src/app/models/utilisateur';
-import { UtilisateurService } from 'src/app/services/utilisateur.service';
 
 @Component({
   selector: 'app-profil-utilisateur',
@@ -10,12 +10,20 @@ import { UtilisateurService } from 'src/app/services/utilisateur.service';
 export class ProfilUtilisateurComponent {
   @Input() profil!: Utilisateur;
 
-  constructor(private utilisateurService: UtilisateurService) {}
+  constructor(private router: Router) {}
 
   getInitials(): string {
     if (this.profil.nom && this.profil.prenom) {
-      return this.profil.nom.charAt(0) + this.profil.prenom.charAt(0);
+      return (
+        this.profil.nom.charAt(0).toUpperCase() +
+        this.profil.prenom.charAt(0).toUpperCase()
+      );
     }
     return '';
+  }
+
+  deconnexion() {
+    localStorage.clear()
+    location.reload();
   }
 }

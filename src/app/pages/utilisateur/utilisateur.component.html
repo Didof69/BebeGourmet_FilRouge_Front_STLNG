@@ -1,4 +1,17 @@
 <app-navbar></app-navbar>
-<app-profil-utilisateur *ngIf="affichage" [profil]="utilisateur"></app-profil-utilisateur>
-<app-connexion *ngIf="!affichage"></app-connexion>
+<ng-container *ngIf="affichage">
+    <app-profil-utilisateur  *ngIf="utilisateur" [profil]="utilisateur"></app-profil-utilisateur>
+    <app-connexion *ngIf="!utilisateur" ></app-connexion>
+</ng-container>
 <app-footer></app-footer>
+
+<!-- à creuser -->
+<!-- <app-navbar></app-navbar>
+<ng-container *ngIf="subUser$ | async as utilisateur; else elseTemplate" >
+    <app-profil-utilisateur [profil]="utilisateur"></app-profil-utilisateur>
+</ng-container>
+
+<ng-template #elseTemplate>
+    <app-connexion ></app-connexion>
+</ng-template>
+<app-footer></app-footer> -->

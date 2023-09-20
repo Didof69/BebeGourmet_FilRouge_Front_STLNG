@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LoginUtilisateur } from 'src/app/models/loginUtilisteur';
 import { UtilisateurService } from 'src/app/services/utilisateur.service';
 import { Router } from '@angular/router';
@@ -17,8 +17,8 @@ export class ConnexionComponent {
   constructor(
     private utilisateurService: UtilisateurService,
     private router: Router
-  ) { }
-  
+  ) {}
+
   connecter() {
     this.utilisateurService.connexionUtilisateur(this.utilisateur).subscribe({
       next: (response) => {
@@ -26,8 +26,7 @@ export class ConnexionComponent {
         console.log('Token reçu:', response.accessToken);
 
         localStorage.setItem('token', response.accessToken);
-
-        this.router.navigate(['/profil-utilisateur']);
+        location.reload(); //recharge la page actuelle
       },
       error: (error) => {
         console.log('Échec de la connexion', error);

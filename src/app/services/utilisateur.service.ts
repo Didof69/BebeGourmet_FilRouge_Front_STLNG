@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { Utilisateur } from '../models/utilisateur';
 import { LoginUtilisateur } from '../models/loginUtilisteur';
 import { ReponseConnexion } from '../models/reponseConnexion';
@@ -37,10 +37,16 @@ export class UtilisateurService {
 
   getProfilUtilisateur(): Observable<Utilisateur>{
     const headers = this.setHeaders();
-    return this.http.get<Utilisateur>(
-      `${this.baseApiUrl}/utilisateurs`,
-      { headers }
-    );
+    return this.http
+      .get<Utilisateur>(`${this.baseApiUrl}/utilisateurs`, { headers })
+      .pipe(
+        tap((utilisateur: Utilisateur) => {
+          localStorage.setItem(
+            'profilUtilisateur',
+            utilisateur.admin.toString()
+          );
+        })
+      );
    };
 
 }

@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'aliment/modifier', component: ModifAlimentComponent },
   { path: 'aliment/supprimer', component: SupprAlimentComponent },
   { path: 'profil-utilisateur', component: UtilisateurComponent },
+  { path: 'profil-utilisateur/ok', component: UtilisateurComponent },
   { path: 'profil-utilisateur/inscription', component: InscriptionComponent },
   { path: 'profil-utilisateur/connexion', component: ConnexionComponent },
   { path: 'profil-utilisateur/child', component: ProfilEnfantComponent },
