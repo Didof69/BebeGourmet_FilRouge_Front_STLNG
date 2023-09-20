@@ -1,3 +1,15 @@
-<div class="container-principal">
-    <p>profil-utilisateur works!</p>
+<div class="profil-banner">
+    <div class="zoneProfil">
+        <h1>Mon Profil</h1>
+        <span class="admin-indicator" *ngIf="profil.admin">#Admin</span>
+    </div>
+    <div class="zoneInitalHello">
+        <div class="initials-circle">
+            <span id="userInitials">{{ getInitials() }}</span>
+        </div>
+        <p id="userHello">Bonjour, {{ profil.prenom }} !</p>
+    </div>
+    <div class="zoneEmail">
+        <span id="userEmail">{{ profil. email }}</span>
+    </div>
 </div>
