@@ -1,0 +1,20 @@
+* {
+    background-color: #225777;
+    color: #F6F1EB;
+}
+
+.planDuSite {
+    margin-left: 1rem;
+}
+
+li {
+    color: #F6F1EB;
+    list-style: none;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.droitReserve {
+    margin-right: 1rem;
+    font-size: 14px;
+}

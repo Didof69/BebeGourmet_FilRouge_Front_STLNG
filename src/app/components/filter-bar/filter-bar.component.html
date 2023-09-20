@@ -1,0 +1,153 @@
+<div class="d-flex container-principal">
+  <div class="card pb-2" [ngClass]="{ filterbar: true, open: isFilterbarOpen }">
+    <div class="card-header" style="background-color: #225777; color: white">
+      Filtres
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAge">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseAge"
+            aria-expanded="true"
+            aria-controls="collapseAge"
+          >
+            A partir de
+          </button>
+        </h2>
+        <div
+          id="collapseAge"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingAge"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body form-check" *ngFor="let age of tabAges">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="{{ age }}"
+              id="{{ age }}"
+              (change)="onCheckAge($event)"
+            />
+            <label class="form-check-label" for="{{ age }}">
+              {{ age }} mois
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCategorie">
+          <button
+          class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseCategorie"
+            aria-expanded="false"
+            aria-controls="collapseCategorie"
+          >
+            Categories
+          </button>
+        </h2>
+        <div
+          id="collapseCategorie"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingCategorie"
+          data-bs-parent="#accordionExample"
+        >
+          <div
+            class="accordion-body form-check"
+            *ngFor="let categorie of tabCategories"
+          >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="{{ categorie }}"
+              id="{{ categorie }}"
+              (change)="onCheckCategorie($event)"
+            />
+            <label class="form-check-label" for="{{ categorie }}">
+              {{ categorie }}
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSaison">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSaison"
+            aria-expanded="false"
+            aria-controls="collapseSaison"
+          >
+            Saisons
+          </button>
+        </h2>
+        <div
+          id="collapseSaison"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingSaison"
+          data-bs-parent="#accordionExample"
+        >
+          <div
+            class="accordion-body form-check"
+            *ngFor="let saison of tabSaisons"
+          >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="{{ saison }}"
+              id="{{ saison }}"
+              (change)="onCheckSaison($event)"
+            />
+            <label class="form-check-label" for="{{ saison }}">
+              {{ saison }}
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingRestriction">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseRestriction"
+            aria-expanded="false"
+            aria-controls="collapseRestriction"
+          >
+            Restrictions
+          </button>
+        </h2>
+        <div
+          id="collapseRestriction"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingRestriction"
+          data-bs-parent="#accordionExample"
+        >
+          <div
+            class="accordion-body form-check"
+            *ngFor="let restriction of tabRestrictions"
+          >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="{{ restriction }}"
+              id="{{ restriction }}"
+              (change)="onCheckRestriction($event)"
+            />
+            <label class="form-check-label" for="{{ restriction }}">
+              {{ restriction }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="btnFilterBar" (click)="toggleFilterbar()">></button>
+</div>

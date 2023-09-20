@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div class="d-flex">
+     <app-filter-bar class="pt-2" [tabCategories]="tabCategories" [tabAges]="tabAges" [tabRestrictions]="tabRestrictions" [tabSaisons]="tabSaisons" (newCaterogieEvent)="onFiltreCategorie($event)" (newAgeEvent)="onFiltreAge($event)" (newRestrictionEvent)="onFiltreRestrictions($event)" (newSaisonEvent)="onFiltreSaisons($event)"></app-filter-bar>
+<app-liste-aliment [aliments]="alimentsToDisplayFilter" [profilUtilisateur]="profilUtilisateur"></app-liste-aliment>
+</div>
+   
+<app-footer></app-footer>
+

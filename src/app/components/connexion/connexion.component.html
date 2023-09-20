@@ -1,0 +1,22 @@
+<div class="mainContainer container-principal">
+
+    <div class="textBienvenue">
+        <h1>Content de vous revoir !</h1>
+    </div>
+
+    <form (ngSubmit)="connecter()">
+        <div class="form-group">
+            <input type="text" class="form-control shadow-sm" [(ngModel)]="utilisateur.email" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control shadow-sm" [(ngModel)]="utilisateur.mot_de_passe" name="mot_de_passe" placeholder="Mot de passe">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Se connecter</button>
+    </form>
+
+    <div class="lienEnregistrer">
+      <p >Pas de compte ? <a href="/profil-utilisateur/inscription">Inscrivez-vous</a></p>  
+    </div>
+    
+</div>
