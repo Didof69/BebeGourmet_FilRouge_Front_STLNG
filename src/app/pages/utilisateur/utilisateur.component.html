@@ -1,7 +1,30 @@
 <app-navbar></app-navbar>
 <ng-container *ngIf="affichage">
-    <app-profil-utilisateur  *ngIf="utilisateur" [profil]="utilisateur"></app-profil-utilisateur>
-    <app-connexion *ngIf="!utilisateur" ></app-connexion>
+  <div *ngIf="utilisateur">
+    <app-profil-utilisateur [profil]="utilisateur"></app-profil-utilisateur>
+    <div class="d-flex flex-wrap justify-content-center container-principal">
+      <app-card-enfant
+        *ngFor="let enfant of enfants"
+        [enfant]="enfant"
+      ></app-card-enfant>
+
+      <!-- bouton ajout enfant -->
+      <div class="d-flex">
+        <button id="btnAjoutEnfant" class="card d-flex justify-content-center align-items-center" [routerLink]="'/profil-utilisateur/child/add'">
+          <div
+            class="plusAjouter d-flex flex-wrap align-items-center"
+          >
+              <img src="../../../assets/plusEnfant.png" />
+              <p id="pAjouter">Ajouter un enfant</p>
+          </div>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+
+  <app-connexion *ngIf="!utilisateur"></app-connexion>
 </ng-container>
 <app-footer></app-footer>
 

@@ -5,6 +5,7 @@
   </div>
 
   <div class="container-aliments card">
+    <div class="scroller">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -12,7 +13,6 @@
           <th class="autre-info">A partir de</th>
           <th class="autre-info">Catégorie</th>
           <th class="autre-info">Saison</th>
-          <th class="autre-info">Restriction</th>
           <th *ngIf="profilUtilisateur" class="autre-info"></th>
         </tr>
       </thead>
@@ -28,13 +28,6 @@
               </li>
             </ul>
           </td>
-          <td>
-            <ul class ="list-group">
-              <li *ngFor="let restriction of aliment.restrictions">
-                {{ restriction.libelle }}
-              </li>
-            </ul>
-          </td>
           <td *ngIf="profilUtilisateur" class="d-flex justify-content-center">
             <button class="btn modifier">Modif {{aliment.id}}</button>
             <button class="btn supprimer">Supprimer</button>
@@ -42,5 +35,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
+
   </div>
 </div>

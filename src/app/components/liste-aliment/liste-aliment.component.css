@@ -1,7 +1,7 @@
-.container-title{
-display: flex;
-justify-content: center;
-align-items: baseline;
+.container-title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 li {
@@ -48,4 +48,11 @@ li {
     width: 15rem;
     height: 2.5rem;
     margin-bottom: 0.5rem;
+}
+
+.scroller {
+    width: auto;
+    height: 1200px;
+    overflow-y: scroll;
+    scrollbar-width: auto;
 }

@@ -1,0 +1,19 @@
+p {
+    color: #982312;
+    font-weight: 600;
+    width: auto;
+}
+.card-enfant{
+margin: 1rem;
+}
+
+.card {
+    border-radius: 20px;
+    width: 400px;
+    height: 180px;
+}
+
+img {
+    padding: 10px;
+
+}
