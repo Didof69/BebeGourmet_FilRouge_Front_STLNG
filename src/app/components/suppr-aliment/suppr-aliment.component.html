@@ -1,3 +1,21 @@
 <app-navbar></app-navbar>
-<p>suppr-aliment works!</p>
+<div class="mainContainer" *ngIf="aliment">
+  <div>
+    <p>{{ aliment.libelle }} :</p>
+  </div>
+
+  <div><p>Etes-vous sûr de vouloir supprimer cet aliment ?</p></div>
+
+  <div>
+    <button
+      type="submit"
+      id="btnSupprimer"
+      [routerLink]="['/aliment']"
+      (click)="deleteAliment(aliment)"
+    >
+      oui, supprimer
+    </button>
+    <button class="btnAnnuler" [routerLink]="['/aliment']">non, annuler</button>
+  </div>
+</div>
 <app-footer></app-footer>

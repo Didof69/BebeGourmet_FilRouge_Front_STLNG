@@ -31,4 +31,21 @@ export class AlimentService {
       { headers }
     );
   }
+
+  getAlimentById(alimentId: number): Observable<Aliment> {
+    // const headers = this.setHeaders();
+    return this.http.get<Aliment>(
+      `http://localhost:3000/api/aliments/${alimentId}`
+    );
+  }
+
+  deleteAliment(aliment: Aliment): Observable<Aliment> {
+    // recup le token dans le localstorage
+    const headers = this.setHeaders();
+    // console.log(headers);
+    return this.http.delete<Aliment>(
+      `http://localhost:3000/api/aliments/${aliment.id}`,
+      { headers }
+    );
+  }
 }
