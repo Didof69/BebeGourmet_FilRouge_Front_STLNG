@@ -1,3 +1,24 @@
 <app-navbar></app-navbar>
-<p>profil-enfant works!</p>
+<div class="container-fluid p-0">
+  <div class="d-flex justify-content-around align-items-center profil-banner shadow ali">
+    <div></div>
+    <div class="zoneAvatar d-flex row justify-content-center">
+      <div class="avatar-circle">
+        <img id="avatar" src="../../../assets/Baby-blanc.png" alt="" />
+      </div>
+      <h1>{{majusculeFirst()}}</h1>
+      <button class="btnModifier" (click)="modifierEnfant()">Modifier</button>
+    </div>
+
+    <div>
+      <div class="zoneProfil">
+        <p>Né(e) le : {{(enfant.date_naissance)}}</p>
+        <p>Âge : mois</p>
+        <p>Restriction(s) :</p>
+        <p>{{enfant.restrictions}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <app-footer></app-footer>

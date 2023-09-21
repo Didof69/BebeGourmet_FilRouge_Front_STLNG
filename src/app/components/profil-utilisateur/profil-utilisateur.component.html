@@ -1,4 +1,4 @@
-<div class="profil-banner mb-4 shadow">
+<div class="profil-banner mb-3 shadow ali">
     <div class="zoneProfil">
         <h1>Mon Profil</h1>
         <span class="admin-indicator" *ngIf="profil.admin">#Admin</span>
@@ -9,8 +9,9 @@
         <div class="initials-circle">
             <span id="userInitials">{{ getInitials() }}</span>
         </div>
-        <p id="userHello">Bonjour, {{ profil.prenom }} !</p>
+        <p id="userHello">Bonjour {{ majusculeFirst() }} !</p>
     </div>
+
     <div class="zoneEmail">
         <span id="userEmail">{{ profil. email }}</span>
     </div>

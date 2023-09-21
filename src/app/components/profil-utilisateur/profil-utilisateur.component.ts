@@ -10,7 +10,7 @@ import { Utilisateur } from 'src/app/models/utilisateur';
 export class ProfilUtilisateurComponent {
   @Input() profil!: Utilisateur;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   getInitials(): string {
     if (this.profil.nom && this.profil.prenom) {
@@ -20,6 +20,12 @@ export class ProfilUtilisateurComponent {
       );
     }
     return '';
+  }
+
+  majusculeFirst() {
+    const prenom =  this.profil.nom.charAt(0).toUpperCase() + this.profil.nom.slice(1)
+    console.log('prenom '+prenom);
+    return prenom
   }
 
   deconnexion() {

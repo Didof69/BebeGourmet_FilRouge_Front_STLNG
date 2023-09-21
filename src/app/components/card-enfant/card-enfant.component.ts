@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, } from '@angular/core';
 import { Enfant } from 'src/app/models/enfant';
 
 @Component({
@@ -8,7 +8,7 @@ import { Enfant } from 'src/app/models/enfant';
 })
 export class CardEnfantComponent {
   @Input() enfant!: Enfant;
-  ngOnInit() {
-    console.log('les enfants', this.enfant.prenom);
-  }
+
+  constructor() {}
+
 }

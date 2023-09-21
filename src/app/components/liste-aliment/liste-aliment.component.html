@@ -1,7 +1,10 @@
 <div class="container-fluid d-flex row justify-content-center container-principal">
   <div class="container-title">
-    <h1 class="text-center">Liste des aliments</h1>
-  <button *ngIf="profilUtilisateur" id="btnAjouter" [routerLink]="['/aliment/ajouter']" routerLinkActive="router-link-active" >Ajouter un aliment</button>
+    <h1>Liste des aliments</h1>
+  
+        <button *ngIf="profilUtilisateur" id="btnAjouter" [routerLink]="['/aliment/ajouter']" routerLinkActive="router-link-active" >Ajouter un aliment</button>
+
+
   </div>
 
   <div class="container-aliments card">

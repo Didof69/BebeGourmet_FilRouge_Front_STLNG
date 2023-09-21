@@ -1,4 +1,4 @@
-<div class="card-enfant d-flex justify-content-start ">
+<button class="card-enfant d-flex justify-content-start" [routerLink]="['/profil-utilisateur/child/',enfant.id]">
   <div class="card d-flex flex-wrap justify-content-center">
     <div class="d-flex justify-content-center">
       <img
@@ -12,4 +12,4 @@
       <p>{{ enfant.prenom }}</p>
     </div>
   </div>
-</div>
+</button>
