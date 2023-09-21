@@ -4,6 +4,7 @@ import { Observable, tap } from 'rxjs';
 import { Utilisateur } from '../models/utilisateur';
 import { LoginUtilisateur } from '../models/loginUtilisteur';
 import { ReponseConnexion } from '../models/reponseConnexion';
+import { Enfant } from '../models/enfant';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,7 @@ export class UtilisateurService {
     });
     return headers;
   }
-  
+
   inscriptionUtilisateur(data: Utilisateur): Observable<Utilisateur> {
     return this.http.post<Utilisateur>(
       `${this.baseApiUrl}/auth/register`,
@@ -35,7 +36,7 @@ export class UtilisateurService {
     );
   }
 
-  getProfilUtilisateur(): Observable<Utilisateur>{
+  getProfilUtilisateur(): Observable<Utilisateur> {
     const headers = this.setHeaders();
     return this.http
       .get<Utilisateur>(`${this.baseApiUrl}/utilisateurs`, { headers })
@@ -47,6 +48,19 @@ export class UtilisateurService {
           );
         })
       );
-   };
+  }
 
+  addEnfantByUser(enfant: Enfant): Observable<Utilisateur> {
+    console.log(enfant);
+    const headers = this.setHeaders();
+    console.log(enfant);
+
+    return this.http.post<Utilisateur>(
+      `http://localhost:3000/api/enfants`,
+      enfant,
+      {
+        headers,
+      }
+    );
+  }
 }
