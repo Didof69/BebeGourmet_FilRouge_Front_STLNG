@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Enfant } from 'src/app/models/enfant';
 import { Restriction } from 'src/app/models/restriction';
 import { RestrictionService } from 'src/app/services/restriction.service';
@@ -28,12 +29,13 @@ export class AjoutEnfantComponent {
   checkedRestrictions: Restriction[] = [];
 
   constructor(
+    private router : Router,
     private utilisateurService: UtilisateurService,
     private restrictionService: RestrictionService // private enfantService: EnfantService
   ) {}
 
   ngOnInit(): void {
-    this.restrictionService.getRestriction().subscribe((data) => {
+    this.restrictionService.getRestrictions().subscribe((data) => {
       this.restrictionsTab = data;
     });
     
@@ -87,7 +89,7 @@ export class AjoutEnfantComponent {
     console.log('je recoie1', this.enfant);
     this.utilisateurService.addEnfantByUser(this.enfant).subscribe({
       next: (response) => {
-        // console.log('Inscription réussie:', response);
+       this.router.navigate([`/profil-utilisateur`])
       },
       error: (error) => {
         // console.log("Echec de l'ajout", error);

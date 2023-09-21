@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class RestrictionService {
   constructor(private http: HttpClient) {}
 
-  getRestriction(): Observable<Restriction[]> {
+  getRestrictions(): Observable<Restriction[]> {
     return this.http.get<Restriction[]>(
       'http://localhost:3000/api/restrictions'
     );

@@ -46,3 +46,26 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppModule { }
 ```
+
+# Installation NgSelect, pour formulaire selectif d'ajout d'aliment: (https://ng-select.github.io/ng-select#/multiselect)
+```bash
+npm install --save @ng-select/ng-select
+```
+
+## Puis dans le app-module.ts:
+```
+import { NgSelectModule } from '@ng-select/ng-select'; 
+import { FormsModule } from '@angular/forms';
+
+@NgModule({ 
+  declarations: [AppComponent], 
+  imports: [
+    NgSelectModule, 
+    FormsModule, 
+    ]
+  bootstrap: [AppComponent]
+   }) 
+  
+  export class AppModule {}
+
+```
