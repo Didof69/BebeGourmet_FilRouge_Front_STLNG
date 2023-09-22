@@ -13,12 +13,26 @@
     <div>
       <div class="zoneProfil">
         <p>Né(e) le : {{(enfant.date_naissance)}}</p>
-        <p>Âge : mois</p>
+        <p>Âge : {{ageEnfant}} mois</p>
         <p>Restriction(s) :</p>
-        <p>{{enfant.restrictions}}</p>
+        <p>{{tabRestrictions}}</p>
       </div>
     </div>
   </div>
 </div>
+<div class="d-flex">
 
+  <app-filter-bar
+    [tabCategories]="tabCategories"
+    [tabRestrictions]="tabRestrictions"
+    [tabSaisons]="tabSaisons"
+    (newCaterogieEvent)="onFiltreCategorie($event)"
+    (newSaisonEvent)="onFiltreSaisons($event)"
+  ></app-filter-bar>
+
+  <app-liste-aliment
+    [aliments]="alimentsToDisplayFilter"
+  ></app-liste-aliment>
+  
+</div>
 <app-footer></app-footer>

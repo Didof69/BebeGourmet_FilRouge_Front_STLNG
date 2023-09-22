@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Enfant } from 'src/app/models/enfant';
 import { Restriction } from 'src/app/models/restriction';
 import { EnfantService } from 'src/app/services/enfant.service';
@@ -18,6 +18,7 @@ export class ModifEnfantComponent {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private enfantService: EnfantService,
     private restrictionService: RestrictionService // private enfantService: EnfantService
   ) {}
@@ -43,7 +44,7 @@ export class ModifEnfantComponent {
     const infoChecked = JSON.parse(target.value);
     // console.log('value en json', infoChecked);
     if (target.checked) {
-      console.log('ce que je selectionne', infoChecked);
+      // console.log('ce que je selectionne', infoChecked);
 
       if (this.checkedRestrictions.length === this.restriction.length) {
         this.checkedRestrictions = [];
@@ -78,21 +79,22 @@ export class ModifEnfantComponent {
     // Ajouter la restriction au tableau si on coche la checkbox
     // Enlever la restriction du tableau si on décoche la checkbox
     // Affiche le table de restriction cochées
+
   }
 
   ajoutEnfant() {
     // this.onChangeRestric;
     this.enfant.restrictions = this.checkedRestrictions;
-    console.log('je recoie1', this.enfant);
     this.enfantService.updateEnfant(this.enfant).subscribe({
       next: (response) => {
         console.log('Inscription réussie:', response);
+        this.router.navigate([`/profil-utilisateur/child/${this.enfant.id}`]);
       },
       error: (error) => {
         console.log("Echec de l'ajout", error);
-        console.log('je recoie3', this.enfant);
+        // console.log('je recoie3', this.enfant);
       },
     });
-    console.log('je recoie4', this.enfant);
+    // console.log('je recoie4', this.enfant);
   }
 }
