@@ -52,7 +52,7 @@ export class AppModule { }
 npm install --save @ng-select/ng-select
 ```
 
-## Puis dans le app-module.ts:
+## Dans le app-module.ts, ajouter import:
 ```
 import { NgSelectModule } from '@ng-select/ng-select'; 
 import { FormsModule } from '@angular/forms';
@@ -69,3 +69,11 @@ import { FormsModule } from '@angular/forms';
   export class AppModule {}
 
 ```
+## Dans le angularjson, ajouter styles:
+````
+"styles": [
+          "node_modules/@ng-select/ng-select/themes/default.theme.css",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "src/styles.css"
+       ],
+``

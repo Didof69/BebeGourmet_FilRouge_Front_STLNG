@@ -9,6 +9,9 @@
     margin: 20px;
 }
 
+.zoneVierge{
+    width : 14rem;
+}
 p {
     margin: 5px;
     line-height: normal;
@@ -51,6 +54,13 @@ h1 {
     font-size: 3rem;
 }
 
-img {
+#avatar {
     width: 4.8rem;
+    /* changement de la balise image par la balise de l'id, sinon conflit avec le svg en image*/
+}
+
+.svg {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

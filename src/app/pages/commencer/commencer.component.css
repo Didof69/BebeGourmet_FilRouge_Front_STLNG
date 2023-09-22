@@ -1,11 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 .top-svg {
     width: 20vh;
-    /* background-color: yellow; */
     display: flex;
     justify-content: left;
 }
@@ -30,7 +29,7 @@ h1 {
     justify-content: center;
 }
 
-h1{
+h1 {
     vertical-align: center;
 }
 
