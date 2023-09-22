@@ -155,12 +155,14 @@ export class ProfilEnfantComponent {
     this.saveFilterTab.categorie = [...filtreCategorie];
     this.extraireAlimentsInterdits();
     this.saveFilter(this.saveFilterTab);
+    this.filtrerAge();
   }
 
   onFiltreSaisons(filtreSaison: string[]) {
     this.saveFilterTab.saisons = filtreSaison;
     this.extraireAlimentsInterdits();
     this.saveFilter(this.saveFilterTab);
+    this.filtrerAge();
   }
 
   //cette methode permet d'iterer sur un aliment et de renvoyer un boolean nécessaire pour que le .include fasse le taf dans extraireAlimentsInterdits()
@@ -189,7 +191,6 @@ export class ProfilEnfantComponent {
     this.alimentsToDisplayRestriction = this.alimentsToDisplay
       .filter((e) => !this.filtreRestriction(e))
       .sort();
-
     this.alimentsToDisplayFilter = this.alimentsToDisplayRestriction;
     console.log('tab restriction', this.alimentsToDisplayFilter);
   }

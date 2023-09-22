@@ -12,7 +12,7 @@
 
     <div>
       <div class="zoneProfil">
-        <p>Né(e) le : {{(enfant.date_naissance)}}</p>
+        <p>Né(e) le : {{(enfant.date_naissance | date : 'dd/MM/yyyy')}}</p>
         <p>Âge : {{ageEnfant}} mois</p>
         <p>Restriction(s) :</p>
         <p>{{tabRestrictions}}</p>
