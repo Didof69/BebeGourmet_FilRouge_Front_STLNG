@@ -25,6 +25,7 @@ import { ProfilEnfantComponent } from './components/profil-enfant/profil-enfant.
 import { ProfilUtilisateurComponent } from './components/profil-utilisateur/profil-utilisateur.component';
 import { SupprAlimentComponent } from './components/suppr-aliment/suppr-aliment.component';
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { FilterBarComponent } from './components/filter-bar/filter-bar.component
     ProfilUtilisateurComponent,
     SupprAlimentComponent,
     FilterBarComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,

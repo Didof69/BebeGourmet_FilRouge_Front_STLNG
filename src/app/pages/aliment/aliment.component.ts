@@ -29,6 +29,7 @@ export class AlimentComponent {
     categorie: ['a'],
     age: [1],
     saisons: ['c'],
+    valeur: '',
   };
 
   constructor(private alimentService: AlimentService) {}
@@ -36,11 +37,10 @@ export class AlimentComponent {
   ngOnInit(): void {
     //verifie le statut admin
     if (localStorage.getItem('profilUtilisateur') == 'true') {
-      this.profilUtilisateur = true
+      this.profilUtilisateur = true;
     }
 
     this.alimentService.getAliments().subscribe((aliments) => {
-    
       this.alimentsToDisplay = aliments;
       this.alimentsToDisplayFilter = [...this.alimentsToDisplay]; //permet d'initialiser le tableau à filtrer
       this.trierTabFiltre(this.alimentsToDisplayFilter);
@@ -104,6 +104,7 @@ export class AlimentComponent {
         categorie: this.tabCategories,
         age: this.tabAges,
         saisons: this.tabSaisons,
+        valeur: '',
       };
 
       // console.log("dans oninit l'objet saveTabFilter est ", this.saveFilterTab);
@@ -129,6 +130,12 @@ export class AlimentComponent {
     this.saveFilter(this.saveFilterTab);
   }
 
+  onSearchValue(value: string) {
+    this.saveFilterTab.valeur = value;
+    this.extraireAlimentsInterdits()
+    this.saveFilter(this.saveFilterTab);
+  }
+  
   onFiltreRestrictions(filtreRestriction: string[]) {
     this.saveTabRestriction = filtreRestriction;
     console.log('dans onFiltre' + this.saveTabRestriction);
@@ -136,6 +143,7 @@ export class AlimentComponent {
     this.onFiltreCategorie(this.saveFilterTab.categorie);
     this.onFiltreAge(this.saveFilterTab.age);
     this.onFiltreSaisons(this.saveFilterTab.saisons);
+    this.onSearchValue(this.saveFilterTab.valeur);
   }
 
   //cette methode permet d'iterer sur un aliment et de renvoyer un boolean nécessaire pour que le .include fasse le taf dans extraireAlimentsInterdits()
@@ -175,14 +183,20 @@ export class AlimentComponent {
     if (
       this.saveFilterTab.categorie.length >= 1 ||
       this.saveFilterTab.age.length >= 1 ||
-      this.saveFilterTab.saisons.length >= 1
+      this.saveFilterTab.saisons.length >= 1 ||
+      this.saveFilterTab.valeur.length >= 1
     ) {
       this.alimentsToDisplayFilter = this.alimentsToDisplayRestriction
         .filter((e) =>
           this.saveFilterTab.categorie.includes(e.category.libelle)
         )
         .filter((e) => this.saveFilterTab.age.includes(e.age_introduction))
-        .filter((e) => this.filtreSaison(e));
+        .filter((e) => this.filtreSaison(e))
+        .filter((e) =>
+          e.libelle
+            .toLocaleLowerCase()
+            .includes(this.saveFilterTab.valeur.toLocaleLowerCase())
+        );
     }
 
     this.trierTabFiltre(this.alimentsToDisplayFilter);
