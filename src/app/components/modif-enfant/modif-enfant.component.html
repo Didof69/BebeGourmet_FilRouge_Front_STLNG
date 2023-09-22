@@ -1,3 +1,49 @@
 <app-navbar></app-navbar>
-<p>modif-enfant works!</p>
+<div class="mainContainer container-principal">
+
+    <div class="textBienvenue">
+        <h1>Mise à jour du profil de {{ enfant.prenom }}</h1>
+    </div>
+
+   <form (ngSubmit)="ajoutEnfant()">
+      <div class="form-group">
+      <input
+        [(ngModel)]="enfant.prenom"
+        type="text"
+        class="form-control shadow-sm"
+        name="prenom"
+        placeholder="Prénom *"
+        readonly
+      />
+    </div>
+    <div class="form-group">
+      <input
+        [(ngModel)]="enfant.date_naissance"
+        type="date"
+        class="form-control shadow-sm"
+        name="date_naissance"
+        readonly
+      />
+    </div>
+
+    <div *ngFor="let restrict of restriction">
+      <input
+        type="checkbox"
+        value="{{ restrict | json }}"
+        [id]="restrict.libelle"
+        (change)="onChangeRestric($event)"
+      />
+      <label [for]="restrict.libelle">{{ restrict.libelle }}</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Modifier</button>
+  </form>
+    
+</div>
 <app-footer></app-footer>
+
+<div *ngIf="enfant" class="mainContainer container-principal">
+
+
+
+
+</div>  

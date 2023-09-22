@@ -11,7 +11,6 @@ export class EnfantService {
 
   constructor(private http: HttpClient) {}
 
-
   setHeaders() {
     const jwtToken = localStorage.getItem('token');
     const headers = new HttpHeaders({
@@ -19,11 +18,22 @@ export class EnfantService {
     });
     return headers;
   }
-  
-  getProfilEnfant(idEnfant:number): Observable<Enfant> {
+
+  getProfilEnfant(idEnfant: number): Observable<Enfant> {
     const headers = this.setHeaders();
     return this.http.get<Enfant>(`${this.baseApiUrl}/enfants/${idEnfant}`, {
       headers,
     });
+  }
+
+  updateEnfant(enfant: Enfant): Observable<Enfant> {
+    const headers = this.setHeaders();
+    return this.http.patch<Enfant>(
+      `http://localhost:3000/api/enfants/${enfant.id}`,
+      enfant,
+      {
+        headers,
+      }
+    );
   }
 }
