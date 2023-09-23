@@ -1,47 +1,48 @@
 <app-navbar></app-navbar>
-<div class="mainContainer container-principal">
-
-    <div class="textBienvenue">
-        <h1>Ajouter un enfant</h1>
-        <h2>Merci d’enregistrer les informations suivantes :</h2>
-    </div>
+<div class="mainContainer">
+  <div class="">
+    <h1>Ajouter un enfant</h1>
+    <h2>Merci d’enregistrer les informations suivantes :</h2>
+  </div>
 
   <form (ngSubmit)="ajoutEnfant()">
-    <div class="form-group">
+    <div class="form-group position-input">
       <input
         [(ngModel)]="enfant.prenom"
         type="text"
-        class="form-control shadow-sm"
+        class="form-control shadow-sm style-input"
         name="prenom"
         placeholder="Prénom *"
         required
       />
     </div>
-    <div class="form-group">
+    <div class="form-group position-input">
       <input
         [(ngModel)]="enfant.date_naissance"
         type="date"
-        class="form-control shadow-sm"
+        class="form-control shadow-sm style-input"
         name="date_naissance"
         required
       />
     </div>
 
-    <div>
-        <div *ngFor="let restrict of restrictionsTab">
-      <input
-        type="checkbox"
-        value="{{ restrict | json }}"
-        [id]="restrict.libelle"
-        (change)="onChangeRestric($event)"
-      />
-      <label [for]="restrict.libelle">{{ restrict.libelle }}</label>
+    <div class="box shadow-sm">
+      <div *ngFor="let restrict of restrictionsTab" class="position">
+        <input
+          type="checkbox"
+          value="{{ restrict | json }}"
+          [id]="restrict.libelle"
+          (change)="onChangeRestric($event)"
+          class="width-check"
+        />
+        <label class="checkbox-space" [for]="restrict.libelle">{{
+          restrict.libelle
+        }}</label>
+      </div>
     </div>
-    </div>
-    
-    <button type="submit" class="btn btn-primary">Ajouter</button>
+
+    <button type="submit" class="btn btn-primary btnModele">Ajouter</button>
   </form>
-    
 </div>
 
 <app-footer></app-footer>

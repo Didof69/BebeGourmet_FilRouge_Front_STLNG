@@ -1,7 +1,8 @@
-img {
+#imageAcceuil {
     width: 80%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    border-radius: 5rem 0;
 }
 
 h1, h2 {
