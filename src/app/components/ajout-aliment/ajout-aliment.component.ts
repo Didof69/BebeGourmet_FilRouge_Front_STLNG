@@ -23,6 +23,11 @@ export class AjoutAlimentComponent implements OnInit {
   selectedCategorie: number[] = [];
   ages: Aliment[] = [];
   selectedAge: Aliment[] = [];
+  // hidden et hidden 1 pour switch entre les div
+  hidden: boolean = true;
+  hidden1: boolean = false;
+  // blockSelect pour verrouiller les inputs
+  blockSelect: boolean = false;
 
   constructor(
     private alimentService: AlimentService,
@@ -67,11 +72,20 @@ export class AjoutAlimentComponent implements OnInit {
     ) {
       alert(`Merci de renseigner les champs vides`);
     } else {
-      this.alimentService.createAliment(newAliment).subscribe(() => {
-        
-                 alert(`L'aliment a été créé.`);
+      this.alimentService.createAliment(newAliment).subscribe(() => {});
+    }
+  }
 
-      });
+  // methode pour les switch de div et le verouillage
+  changediv() {
+    if (
+      this.hidden === this.hidden &&
+      this.hidden1 === this.hidden1 &&
+      this.blockSelect === this.blockSelect
+    ) {
+      this.hidden = !this.hidden;
+      this.hidden1 = !this.hidden1;
+      this.blockSelect = !this.blockSelect;
     }
   }
 }
