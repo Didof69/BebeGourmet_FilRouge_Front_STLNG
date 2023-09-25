@@ -9,8 +9,8 @@
       ></app-card-enfant>
 
       <!-- bouton ajout enfant -->
-      <div class="d-flex">
-        <button id="btnAjoutEnfant" class="card d-flex justify-content-center align-items-center" [routerLink]="'/profil-utilisateur/child/add'">
+      <div class="d-flex ">
+        <button id="btnAjoutEnfant" class="card d-flex justify-content-center align-items-center button-shadow-hover" [routerLink]="'/profil-utilisateur/child/add'">
           <div
             class="plusAjouter d-flex flex-wrap align-items-center"
           >
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <app-connexion *ngIf="!utilisateur"></app-connexion>
+  <app-connexion *ngIf="!utilisateur" ></app-connexion>
 </ng-container>
 <app-footer></app-footer>
 

@@ -1,4 +1,4 @@
-<button class="card-enfant d-flex justify-content-start" [routerLink]="['/profil-utilisateur/child/',enfant.id]">
+<button class="card-enfant d-flex justify-content-start button-shadow-hover" [routerLink]="['/profil-utilisateur/child/',enfant.id]">
   <div class="card d-flex flex-wrap justify-content-center">
     <div class="d-flex justify-content-center">
       <img
@@ -9,7 +9,7 @@
       />
     </div>
     <div>
-      <p>{{ enfant.prenom }}</p>
+      <p>{{ majusculeFirst() }}</p>
     </div>
   </div>
 </button>

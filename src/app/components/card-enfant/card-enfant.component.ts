@@ -11,4 +11,11 @@ export class CardEnfantComponent {
 
   constructor() {}
 
+  majusculeFirst() {
+    const prenom =
+      this.enfant.prenom.charAt(0).toUpperCase() + this.enfant.prenom.slice(1);
+    console.log('prenom ' + prenom);
+    return prenom;
+  }
+
 }

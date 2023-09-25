@@ -5,47 +5,15 @@
     </div>
 
     <div class="accordion" id="accordionExample">
-      <div class="accordion-item filterAge">
-        <h2 class="accordion-header" id="headingAge">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseAge"
-            aria-expanded="true"
-            aria-controls="collapseAge"
-          >
-            A partir de
-          </button>
-        </h2>
-        <div
-          id="collapseAge"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingAge"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body form-check" *ngFor="let age of tabAges">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value="{{ age }}"
-              id="{{ age }}"
-              (change)="onCheckAge($event)"
-            />
-            <label class="form-check-label" for="{{ age }}">
-              {{ age }} mois
-            </label>
-          </div>
-        </div>
-      </div>
+
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingCategorie">
           <button
-          class="accordion-button collapsed"
+            class="accordion-button collapsed"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseCategorie"
-            aria-expanded="false"
+            aria-expanded="true"
             aria-controls="collapseCategorie"
           >
             Categories
@@ -53,7 +21,7 @@
         </h2>
         <div
           id="collapseCategorie"
-          class="accordion-collapse collapse"
+          class="accordion-collapse collapse show"
           aria-labelledby="headingCategorie"
           data-bs-parent="#accordionExample"
         >
@@ -74,6 +42,41 @@
           </div>
         </div>
       </div>
+
+      <div *ngIf="enfant == undefined" class="accordion-item">
+        <h2 class="accordion-header" id="headingAge">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseAge"
+            aria-expanded="false"
+            aria-controls="collapseAge"
+          >
+            A partir de
+          </button>
+        </h2>
+        <div
+          id="collapseAge"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingAge"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body form-check" *ngFor="let age of tabAges">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="{{ age }}"
+              id="{{ age }}"
+              (change)="onCheckAge($event)"
+            />
+            <label class="form-check-label" for="{{ age }}">
+              {{ age }} mois
+            </label>
+          </div>
+        </div>
+      </div>
+
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingSaison">
           <button
@@ -110,7 +113,8 @@
           </div>
         </div>
       </div>
-      <div class="accordion-item filterRestrictions">
+
+      <div *ngIf="enfant == undefined" class="accordion-item">
         <h2 class="accordion-header" id="headingRestriction">
           <button
             class="accordion-button collapsed"

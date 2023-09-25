@@ -1,3 +1,7 @@
+.button-shadow-hover:not(.card-enfant *):hover {
+    box-shadow: 0px 0px 15px -4px #225777;
+}
+
 p {
     color: #982312;
     font-weight: 600;
