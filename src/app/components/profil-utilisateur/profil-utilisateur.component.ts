@@ -15,8 +15,8 @@ export class ProfilUtilisateurComponent {
   getInitials(): string {
     if (this.profil.nom && this.profil.prenom) {
       return (
-        this.profil.nom.charAt(0).toUpperCase() +
-        this.profil.prenom.charAt(0).toUpperCase()
+        this.profil.prenom.charAt(0).toUpperCase() +
+        this.profil.nom.charAt(0).toUpperCase()
       );
     }
     return '';

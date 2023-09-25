@@ -8,8 +8,6 @@
 
 li {
     list-style-type: none;
-    font-size: 14px;
-    line-height: 16px;
     padding-left: 0;
 }
 
@@ -25,11 +23,10 @@ li {
 .btn {
     margin: 0;
     border-radius: 2rem;
-    width: 54px;
-    height: 28px;
+    width: 3rem;
     color: white;
     border: none;
-    font-size: 8px;
+    font-size: 0.5rem;
 }
 
 
@@ -58,7 +55,7 @@ li {
 }
 
 .ligne-shadow-hover :hover {
-    box-shadow: 0px 0px 15px -4px #225777;
+    font-weight: bolder;
 }
 
 .scroller {
