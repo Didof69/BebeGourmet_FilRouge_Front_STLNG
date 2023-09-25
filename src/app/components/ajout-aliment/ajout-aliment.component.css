@@ -1,5 +1,6 @@
+/* modif du margin top */
 .container {
-    margin-top: 6%;
+    margin-top: 2rem;
     width: 40vw;
 }
 
@@ -8,10 +9,11 @@ h1 {
     justify-content: center;
 }
 
+/* supp valeur inutile */
 .letterSpacing {
     display: flex;
     justify-content: center;
-    font-size: large;
+    /* font-size: large; */
     letter-spacing: 1.5px;
 }
 
@@ -25,6 +27,9 @@ h1 {
     justify-content: left;
 }
 
+/* supp du Xlarge + line-height pour centrer placeholder 
+dans les input du ng select (pas trouver d'autre méthode)
+padding left*/
 .ng-select.custom ::ng-deep .ng-select-container {
     background-color: rgba(34, 87, 119, 0.2);
     min-height: 0px;
@@ -32,10 +37,12 @@ h1 {
     height: 50px;
     width: 100%;
     margin-bottom: 15px;
-
-    font-size: x-large;
+    display: flex;
+    line-height: 38px;
+    padding-left: 2.5rem;
 }
 
+/* supp du Xlarge,  padding left*/
 .inputStyle {
     background-color: rgba(34, 87, 119, 0.2);
     min-height: 0px;
@@ -43,8 +50,8 @@ h1 {
     height: 50px;
     width: 100%;
     margin-bottom: 15px;
-
-    font-size: x-large;
+    padding-left: 3rem;
+    font-size: medium;
 }
 
 /* il faut ajouter "node_modules/@ng-select/ng-select/themes/default.theme.css", dans le angular.Json // partie "style" */
@@ -61,6 +68,7 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
+/* margin left pour espacement bouton change juste la valeur si tu trouve que l'espace n'est pas assez large */
 .btnModeleRed {
     font-size: 1rem;
     color: #ffffff;
@@ -71,4 +79,5 @@ h1 {
     width: 12rem;
     height: 2.5rem;
     margin-bottom: 0.5rem;
+    margin-left: 2rem;
 }

@@ -32,6 +32,9 @@ export class SupprAlimentComponent {
 
   deleteAliment(aliment: Aliment) {
     // console.log('id plante à supprimer :', aliment);
-    this.alimentService.deleteAliment(aliment).subscribe()
+    this.alimentService.deleteAliment(aliment).subscribe();
+    setTimeout(() => {
+      location.reload();
+    }, 100); // ajout du settimeout pour refresh la page
   }
 }
