@@ -1,3 +1,102 @@
 <app-navbar></app-navbar>
-<p>modif-aliment works!</p>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <form>
+        <h1 class="text-center mb-4">Modifier un aliment</h1>
+        <p class="text-center">
+          Indiquez les éléments que vous souhaitez modifier
+        </p>
+
+        <!-- Champs "Nom" -->
+        <div class="form-group">
+          <input
+            #libelle
+            type="text"
+            class="form-control custom-input"
+            id="Libelle"
+            placeholder="Nom"
+            required
+          />
+        </div>
+
+        <!-- Champs "Catégorie" -->
+        <div class="form-group">
+          <ng-select
+            [items]="categorie"
+            [multiple]="true"
+            bindLabel="libelle"
+            [(ngModel)]="selectedCategorie"
+            [ngModelOptions]="{ standalone: true }"
+            [maxSelectedItems]="1"
+            bindValue="id"
+            placeholder="Catégorie"
+            class="custom-input"
+          >
+          </ng-select>
+        </div>
+
+        <!-- Champs "Age d'introduction" -->
+        <div class="form-group">
+          <input
+            #age_introduction
+            type="text"
+            class="form-control custom-input"
+            id="Age_introduction"
+            placeholder="Age d'introduction"
+            required
+          />
+        </div>
+
+        <!-- Champs "Saison(s)" -->
+        <div class="form-group">
+          <ng-select
+            [items]="saisons"
+            [multiple]="true"
+            bindLabel="libelle"
+            [(ngModel)]="selectedSaisons"
+            [ngModelOptions]="{ standalone: true }"
+            [maxSelectedItems]="3"
+            placeholder="Saison(s)"
+            class="custom-input"
+          >
+          </ng-select>
+        </div>
+
+        <!-- Champs "Restriction(s)" -->
+        <div class="form-group">
+          <ng-select
+            [items]="restrictions"
+            [multiple]="true"
+            bindLabel="libelle"
+            [(ngModel)]="selectedRestrictions"
+            [ngModelOptions]="{ standalone: true }"
+            placeholder="Restriction(s)"
+            class="custom-input"
+          >
+          </ng-select>
+        </div>
+
+        <!-- Bouton "Ajouter" -->
+        <div class="form-group">
+          <button
+            type="button"
+            class="btn btn-color btn-block"
+            (click)="
+              updateAliment(
+                libelle.value,
+                selectedCategorie,
+                +age_introduction.value,
+                selectedSaisons,
+                selectedRestrictions
+              )
+            "
+          >
+            Modifier
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>

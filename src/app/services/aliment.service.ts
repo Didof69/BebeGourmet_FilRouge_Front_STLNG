@@ -40,6 +40,20 @@ export class AlimentService {
     );
   }
 
+  updateAliment(
+    alimentID: number,
+    aliment: CreateAliment
+  ): Observable<Aliment> {
+    const headers = this.setHeaders();
+    return this.http.patch<Aliment>(
+      `http://localhost:3000/api/aliments/${alimentID}`,
+      aliment,
+      {
+        headers,
+      }
+    );
+  }
+
   deleteAliment(aliment: Aliment): Observable<Aliment> {
     // recup le token dans le localstorage
     const headers = this.setHeaders();
