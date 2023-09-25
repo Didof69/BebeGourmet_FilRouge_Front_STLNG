@@ -35,9 +35,8 @@ export class ModifAlimentComponent implements OnInit {
 
   ngOnInit() {
     // Obtenez le paramètre 'id' depuis la route
-    const alimentIdFromRoute = Number(
-      this.route.snapshot.paramMap.get('alimentId')
-    );
+    const alimentIdFromRoute = Number(this.route.snapshot.paramMap.get('id'));
+    console.log('is this the good idea ? ', alimentIdFromRoute);
 
     // Utilisez l'ID récupéré pour obtenir l'objet Aliment correspondant
     this.alimentService.getAlimentById(alimentIdFromRoute).subscribe((data) => {
@@ -63,6 +62,19 @@ export class ModifAlimentComponent implements OnInit {
     saisons: Saison[],
     restrictions: Restriction[]
   ) {
+    if (!libelle) {
+      libelle = this.aliment.libelle;
+    }
+    if (!age_introduction) {
+      age_introduction = this.aliment.age_introduction;
+    }
+    if (saisons.length === 0) {
+      // Si saisons n'est pas défini, utilisez la valeur d'origine
+      saisons = this.aliment.saisons;
+    }
+    if (restrictions.length === 0) {
+      restrictions = this.aliment.restrictions;
+    }
     let updateAliment = {
       libelle: libelle,
       id_categorie: categoryId[0],
@@ -70,11 +82,12 @@ export class ModifAlimentComponent implements OnInit {
       saisons: saisons,
       restrictions: restrictions,
     };
+    console.log(updateAliment);
     this.alimentService
       .updateAliment(this.aliment.id, updateAliment)
       .subscribe((data) => {
         if (data) {
-          alert(`L'aliment ${data} a été mis à jour.`);
+          alert(`L'aliment a été mis à jour.`);
         }
       });
   }
