@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Aliment } from 'src/app/models/aliment';
 import { AlimentService } from 'src/app/services/aliment.service';
 
@@ -13,10 +13,16 @@ export class SupprAlimentComponent {
 
   constructor(
     private alimentService: AlimentService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
+    //reoriente quand pas admine vers 404
+    if (localStorage.getItem('profilUtilisateur') != 'true') {
+      this.router.navigate(['/**']);
+    }
+
     const routeParam = this.route.snapshot.paramMap;
     const alimentIdFromRoute = Number(routeParam.get('id'));
 

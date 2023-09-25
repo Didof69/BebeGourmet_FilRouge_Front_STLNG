@@ -19,8 +19,8 @@
           <th *ngIf="profilUtilisateur" class="autre-info"></th>
         </tr>
       </thead>
-      <tbody>
-        <tr *ngFor="let aliment of aliments">
+      <tbody class="ligne-shadow-hover">
+        <tr *ngFor="let aliment of aliments" >
           <td>{{ aliment.libelle }}</td>
           <td>{{ aliment.age_introduction }} mois</td>
           <td>{{ aliment.category.libelle }}</td>
@@ -32,8 +32,8 @@
             </ul>
           </td>
           <td *ngIf="profilUtilisateur" class="d-flex justify-content-center">
-            <button class="btn modifier"   [routerLink]="['/aliment/modifier/', aliment.id]">Modifier</button>
-            <button class="btn supprimer"   [routerLink]="['/aliment/supprimer/', aliment.id]">Supprimer</button>
+            <button class="btn modifier"   [routerLink]="['/aliment/modifier/', aliment.id]">Modif.</button>
+            <button class="btn supprimer"   [routerLink]="['/aliment/supprimer/', aliment.id]">Suppr.</button>
           </td>
         </tr>
       </tbody>

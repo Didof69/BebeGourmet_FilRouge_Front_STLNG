@@ -7,7 +7,7 @@ import { AlimentService } from 'src/app/services/aliment.service';
 import { CategorieService } from 'src/app/services/categorie.service';
 import { RestrictionService } from 'src/app/services/restriction.service';
 import { SaisonService } from 'src/app/services/saison.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-modif-aliment',
@@ -30,10 +30,16 @@ export class ModifAlimentComponent implements OnInit {
     private saisonService: SaisonService,
     private restrictionService: RestrictionService,
     private categorieService: CategorieService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
+    //réoriente vers 404 si pas admin
+    if (localStorage.getItem('profilUtilisateur') != 'true') {
+      this.router.navigate(['/**']);
+    }
+    
     // Obtenez le paramètre 'id' depuis la route
     const alimentIdFromRoute = Number(this.route.snapshot.paramMap.get('id'));
     console.log('is this the good idea ? ', alimentIdFromRoute);

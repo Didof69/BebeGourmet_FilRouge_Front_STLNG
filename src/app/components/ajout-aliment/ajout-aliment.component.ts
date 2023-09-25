@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Aliment } from 'src/app/models/aliment';
 import { Categorie } from 'src/app/models/categorie';
 import { Restriction } from 'src/app/models/restriction';
@@ -33,10 +34,16 @@ export class AjoutAlimentComponent implements OnInit {
     private alimentService: AlimentService,
     private saisonService: SaisonService,
     private restrictionsService: RestrictionService,
-    private categorieService: CategorieService
+    private categorieService: CategorieService, 
+    private router :Router,
   ) {}
 
   ngOnInit() {
+    //réoriente vers 404 si pas admin
+    if (localStorage.getItem('profilUtilisateur') != 'true') {
+      this.router.navigate(['/**']);
+    }
+
     // Dans ngOnInit, récupérez les saisons depuis l'API en utilisant le SaisonService
     this.saisonService.getSaisons().subscribe((data) => {
       this.saisons = data;
