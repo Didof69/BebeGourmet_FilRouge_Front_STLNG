@@ -1,44 +1,58 @@
 <div class="container-fluid d-flex row justify-content-center container-principal">
   <div class="container-title">
     <h1>Liste des aliments</h1>
-  
-        <button *ngIf="profilUtilisateur" id="btnAjouter" [routerLink]="['/aliment/ajouter']" routerLinkActive="router-link-active" >Ajouter un aliment</button>
 
-
+    <button
+      *ngIf="profilUtilisateur"
+      id="btnAjouter"
+      [routerLink]="['/aliment/ajouter']"
+      routerLinkActive="router-link-active"
+    >
+      Ajouter un aliment
+    </button>
   </div>
 
   <div class="container-aliments card">
     <div class="scroller">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Libellé</th>
-          <th class="autre-info">A partir de</th>
-          <th class="autre-info">Catégorie</th>
-          <th class="autre-info">Saison</th>
-          <th *ngIf="profilUtilisateur" class="autre-info"></th>
-        </tr>
-      </thead>
-      <tbody class="ligne-shadow-hover">
-        <tr *ngFor="let aliment of aliments" >
-          <td>{{ aliment.libelle }}</td>
-          <td>{{ aliment.age_introduction }} mois</td>
-          <td>{{ aliment.category.libelle }}</td>
-          <td>
-            <ul class ="list-group">
-              <li *ngFor="let saison of aliment.saisons">
-                {{ saison.libelle }}
-              </li>
-            </ul>
-          </td>
-          <td *ngIf="profilUtilisateur">
-            <button class="btn modifier"   [routerLink]="['/aliment/modifier/', aliment.id]">Modif.</button>
-            <button class="btn supprimer"   [routerLink]="['/aliment/supprimer/', aliment.id]">Suppr.</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Libellé</th>
+            <th class="autre-info">A partir de</th>
+            <th class="autre-info">Catégorie</th>
+            <th class="autre-info">Saison</th>
+            <th *ngIf="profilUtilisateur" class="autre-info"></th>
+          </tr>
+        </thead>
+        <tbody class="ligne-shadow-hover">
+          <tr *ngFor="let aliment of aliments">
+            <td>{{ aliment.libelle }}</td>
+            <td>{{ aliment.age_introduction }} mois</td>
+            <td>{{ aliment.category.libelle }}</td>
+            <td>
+              <ul class="list-group">
+                <li *ngFor="let saison of aliment.saisons">
+                  {{ saison.libelle }}
+                </li>
+              </ul>
+            </td>
+            <td *ngIf="profilUtilisateur" class="zone-boutons">
+              <button
+                class="btn modifier"
+                [routerLink]="['/aliment/modifier/', aliment.id]"
+              >
+                Modif.
+              </button>
+              <button
+                class="btn supprimer"
+                [routerLink]="['/aliment/supprimer/', aliment.id]"
+              >
+                Suppr.
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
   </div>
 </div>
