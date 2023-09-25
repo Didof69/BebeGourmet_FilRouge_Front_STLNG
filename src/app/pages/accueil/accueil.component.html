@@ -1,15 +1,85 @@
 <app-navbar></app-navbar>
 
 <div
-  class="d-flex flex-column align-items-center text-center container-principal"
+  class="d-flex flex-column align-items-center mt-5 container-principal"
 >
-  <div class="title" style="width: 80%; margin-top: 1.5rem;">
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../../assets/home-1.jpg" class="d-block" alt="...">
+      <div class="carousel-caption d-none d-md-block zoneTexte">
     <h1>Bienvenue sur Bébé Gourmet</h1>
     <h2>
       Votre guide simplifié pour la diversification alimentaire de votre bébé !
     </h2>
   </div>
-  <div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../../assets/home-4.jpg" class="d-block" alt="...">
+      <div class="carousel-caption d-none d-md-block zoneTexte">
+     <h5>La diversification alimentaire peut être un défi pour tout parent.</h5>
+           <p>Chez Bébé Gourmet, nous comprenons les inquiétudes et les questions qui
+      peuvent surgir lorsque vous commencez à introduire de nouveaux aliments
+      dans le régime de votre bébé. C'est pourquoi nous avons créé une
+      plateforme conviviale et informative pour vous aider à chaque étape de ce
+      voyage passionnant.
+    </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../../assets/home-3.jpg" class="d-block" alt="...">
+      <div class="carousel-caption d-none d-md-block zoneTexte">
+         <h5>Fini les devinettes !</h5>
+            <p>
+     Bébé Gourmet vous fournit une liste claire
+      d'aliments appropriés à chaque âge, ce qui rend facile la sélection des
+      options de repas pour votre petit trésor.
+    </p>
+      </div>
+    </div>
+        <div class="carousel-item">
+      <img src="../../../assets/home-2.jpg" class="d-block" alt="...">
+      <div class="carousel-caption d-none d-md-block zoneTexte">
+        <h5>Notre application est intuitive et facile à utiliser !</h5>
+          <p>
+      Même pour les
+      parents les moins technophiles. Accédez rapidement aux informations dont
+      vous avez besoin, quand vous en avez besoin.
+          Simplifiez la diversification alimentaire avec Bébé Gourmet. Créez votre
+      compte dès maintenant et commencez à nourrir votre bébé avec confiance !
+    </p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<app-footer></app-footer>
+
+
+
+  <!-- <div class="title" style="width: 80%; margin: 1.5rem 0;">
+    <h1>Bienvenue sur Bébé Gourmet</h1>
+    <h2>
+      Votre guide simplifié pour la diversification alimentaire de votre bébé !
+    </h2>
+  </div> -->
+  <!-- <div>
     <img id="imageAcceuil" class="shadow" src="../../../assets/immage_accueil.png" alt="" />
   </div>
 
@@ -38,7 +108,4 @@
       Simplifiez la diversification alimentaire avec Bébé Gourmet. Créez votre
       compte dès maintenant et commencez à nourrir votre bébé avec confiance !
     </p>
-  </div>
-</div>
-
-<app-footer></app-footer>
+  </div> -->

@@ -1,22 +1,32 @@
-#imageAcceuil {
+/* #imageAcceuil {
     width: 80%;
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 5rem 0;
-}
+} */
 
 h1, h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 p {
-    font-size: 14px;
+    font-size: 1rem;
     margin: 0.5rem;
 }
 
-.paragraphe {
-    width: 70%;
+.carousel {
+    width: 60%;
+    height: auto;
+    /* margin-bottom: 10rem !important; */
 }
 
+.carousel-inner img {
+width: 100%;
+    border-radius: 3rem;
+}
 
-
+.zoneTexte {
+    background-color: rgba(246, 241, 235, 0.9);
+    color: #303030;
+    border-radius: 20px;
+}

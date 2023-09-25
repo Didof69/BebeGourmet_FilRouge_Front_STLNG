@@ -2,32 +2,35 @@
     width: 0;
     overflow: hidden;
     transition: width 0.5s;
-
+    position: relative;
+    top: 5rem;
+    left: 0;
 }
 
 .filterbar.open {
     width: 14rem;
-
 }
 
 #btnFilterBar {
-    /* margin-left: 20vh; */
-    height: 5rem;
+    position: relative;
+    top: 5rem;
+    left: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 50vh;
     width: 2rem;
     background-color: #225777;
     color: #fff;
     border: none;
     border-radius: 0 50% 50% 0;
-    /* padding: 10px 20px; */
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .accordion-body {
     height: 1rem;
     display: flex;
     align-items: center;
-
 }
 
 label {
@@ -38,3 +41,6 @@ label {
     height: 1rem;
 }
 
+.form-check{
+    margin-left: 0.8rem;
+}
