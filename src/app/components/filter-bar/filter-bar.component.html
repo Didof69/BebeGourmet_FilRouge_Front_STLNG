@@ -153,5 +153,7 @@
     </div>
   </div>
 
-  <button id="btnFilterBar" (click)="toggleFilterbar()">></button>
+  <button *ngIf="enfant != undefined" id="btnFilterBarEnfant" (click)="toggleFilterbar()">></button>
+
+  <button *ngIf="enfant == undefined" id="btnFilterBarUtilisateur" (click)="toggleFilterbar()">></button>
 </div>

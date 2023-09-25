@@ -23,7 +23,7 @@ export class ProfilUtilisateurComponent {
   }
 
   majusculeFirst() {
-    const prenom =  this.profil.nom.charAt(0).toUpperCase() + this.profil.nom.slice(1)
+    const prenom =  this.profil.prenom.charAt(0).toUpperCase() + this.profil.prenom.slice(1)
     console.log('prenom '+prenom);
     return prenom
   }
