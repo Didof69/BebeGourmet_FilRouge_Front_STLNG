@@ -2,10 +2,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 120px;
+    padding-top: 7.5rem;
 }
-
-
 
 #btnSupprimer {
     font-size: 1rem;
@@ -13,7 +11,7 @@
     background-color: #225777;
     border: none;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 1.88rem;
     width: 12rem;
     height: 2.5rem;
     margin-bottom: 0.5rem;
@@ -25,19 +23,19 @@
     background-color: #982312;
     border: none;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 1.88rem;
     width: 12rem;
     height: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 button {
-    margin: 0 70px;
+    margin: 0 4.38rem;
 }
 
 p {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    padding: 40px;
-    font-size: 24px;
+    padding: 2.5rem;
+    font-size: 1.5rem;
 }

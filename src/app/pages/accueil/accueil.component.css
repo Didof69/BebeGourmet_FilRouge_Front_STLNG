@@ -36,7 +36,7 @@
     .zoneTexte {
         background-color: rgba(246, 241, 235, 0.9);
         color: #303030;
-        border-radius: 20px;
+        border-radius: 1.25;
     }
 
     @media (max-width: 1000px) {

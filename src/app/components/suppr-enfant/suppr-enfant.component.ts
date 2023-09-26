@@ -19,10 +19,6 @@ export class SupprEnfantComponent {
 
   ngOnInit() {
     //reoriente quand pas admine vers 404
-    if (localStorage.getItem('profilUtilisateur') != 'true') {
-      this.router.navigate(['/**']);
-    }
-
     const routeParam = this.route.snapshot.paramMap;
     const enfantIdFromRoute = Number(routeParam.get('id'));
 
@@ -37,10 +33,12 @@ export class SupprEnfantComponent {
   }
 
   deleteEnfant(enfant:Enfant) {
-    this.enfantService.deleteEnfant(enfant).subscribe();
-    setTimeout(() => {
-      location.reload();
-    }, 100);  // ajout du settimeout pour refresh la page
-  
+    this.enfantService.deleteEnfant(enfant).subscribe({
+      next: (response) => {
+        this.router.navigate([`/profil-utilisateur`]);
+      },
+      error: (error) => {
+      },
+    });  
   }
 }

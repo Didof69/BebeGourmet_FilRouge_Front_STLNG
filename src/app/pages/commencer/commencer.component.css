@@ -21,7 +21,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.06rem;
 }
 
 .btn {
@@ -41,4 +41,9 @@ button {
     background-color: #225777;
     color: white;
     border: none;
+}
+
+.padding {
+    padding-top: 12rem;
+    /*descente de l'enssemble du logo, texte et bouton */
 }

@@ -34,8 +34,8 @@ export class AjoutAlimentComponent implements OnInit {
     private alimentService: AlimentService,
     private saisonService: SaisonService,
     private restrictionsService: RestrictionService,
-    private categorieService: CategorieService, 
-    private router :Router,
+    private categorieService: CategorieService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -79,10 +79,8 @@ export class AjoutAlimentComponent implements OnInit {
     ) {
       alert(`Merci de renseigner les champs vides`);
     } else {
-      this.alimentService.createAliment(newAliment).subscribe(() => {});
-      setTimeout(() => {
-        location.reload();
-      }, 100); // ajout du settimeout pour refresh la page 
+      this.alimentService.createAliment(newAliment).subscribe(
+        () => { this.router.navigate([`/aliment`]); });
     }
   }
 

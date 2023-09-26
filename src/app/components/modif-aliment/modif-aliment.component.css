@@ -1,32 +1,87 @@
-.btn-color {
-    background-color: #225777;
-    color: #FFFFFF;
-    padding: 0 75px;
+/* modif du margin top */
+.container {
+    margin-top: 3rem;
+    width: 40vw;
 }
 
-input {
-    background-color: rgba(34, 87, 119, 0.2);
-    border-radius: 28px;
-    height: 50px;
+h1 {
+    display: flex;
+    justify-content: center;
 }
 
-button {
-    border-radius: 28px;
-    height: 50px;
+.letterSpacing {
+    display: flex;
+    justify-content: center;
+}
+
+.lowSize {
+    font-size: small;
 }
 
 .svg {
-    height: 10em;
+    height: 10rem;
     display: flex;
     justify-content: left;
 }
 
-.custom-input {
+/* ajout placeholder opacité sur les input pour avoir la meme partout */
+::placeholder {
+    opacity: 0.6;
+}
+
+/* supp du Xlarge + line-height pour centrer placeholder 
+dans les input du ng select (pas trouver d'autre méthode)
+padding left*/
+.ng-select.custom ::ng-deep .ng-select-container {
     background-color: rgba(34, 87, 119, 0.2);
-    border-radius: 28px;
-    height: 50px;
-    margin-bottom: 15px;
-    /* Espacement entre les champs */
+    min-height: 0;
+    border-radius: 1.75rem;
+    height: 3.13rem;
+    width: 100%;
+    margin-bottom: 0.94rem;
+    display: flex;
+    line-height: 2.38rem;
+    padding-left: 2.5rem;
+}
+
+/* supp du Xlarge,  padding left*/
+.inputStyle {
+    background-color: rgba(34, 87, 119, 0.2);
+    min-height: 0;
+    border-radius: 1.75rem;
+    height: 3.13rem;
+    width: 100%;
+    margin-bottom:  0.94rem ;
+        padding-left: 3rem;
+    font-size: medium;
+}
+
+/* il faut ajouter "node_modules/@ng-select/ng-select/themes/default.theme.css", dans le angular.Json // partie "style" */
+
+.btnModele {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #225777;
+    border: none;
+    cursor: pointer;
+    border-radius: 1.88rem;
+    width: 12rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* margin left pour espacement bouton change juste la valeur si tu trouve que l'espace n'est pas assez large */
+.btnModeleRed {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #982312;
+    border: none;
+    cursor: pointer;
+    border-radius: 1.88rem;
+    width: 12rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
 }
 
 /* Pour aligner le texte du placeholder au centre */

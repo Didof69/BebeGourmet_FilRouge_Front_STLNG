@@ -10,11 +10,11 @@
 li {
     color: #F6F1EB;
     list-style: none;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0.88rem;
+    line-height: 1rem;
 }
 
 .droitReserve {
     margin-right: 1rem;
-    font-size: 14px;
+    font-size: 0.88rem;
 }

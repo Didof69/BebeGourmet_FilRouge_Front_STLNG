@@ -10,8 +10,8 @@ ajout des btn + route
   <div class="">
     <div class="">
       <form>
-        <h1 *ngIf="hidden" class="">Ajouter un aliment</h1>
-        <h1 *ngIf="hidden1" class="letterSpacing">
+        <h1 *ngIf="hidden">Ajouter un aliment</h1>
+        <h1 *ngIf="hidden1" class="text-center">
           Voulez vous vraiment ajouter cet aliment ?
         </h1>
         <p *ngIf="hidden" class="letterSpacing">
@@ -26,7 +26,7 @@ ajout des btn + route
             type="text"
             class="form-control inputStyle"
             id="Libelle"
-            placeholder="Nom*"
+            placeholder="Nom *"
             required
           />
         </div>
@@ -36,7 +36,7 @@ ajout des btn + route
           <ng-select
             [disabled]="blockSelect"
             [items]="categorie"
-            placeholder="Catégorie(s)"
+            placeholder="Catégorie(s) *"
             [multiple]="true"
             bindLabel="libelle"
             [(ngModel)]="selectedCategorie"
@@ -56,7 +56,7 @@ ajout des btn + route
             type="text"
             class="form-control inputStyle"
             id="Age_introduction"
-            placeholder="Age d'introduction*"
+            placeholder="Age d'introduction *"
             required
           />
         </div>
@@ -71,7 +71,7 @@ ajout des btn + route
             [(ngModel)]="selectedSaisons"
             [ngModelOptions]="{ standalone: true }"
             [maxSelectedItems]="3"
-            placeholder="saison(s)"
+            placeholder="Saison(s) *"
             class="custom"
           >
           </ng-select>
@@ -133,8 +133,7 @@ ajout des btn + route
                 selectedSaisons,
                 selectedRestrictions
               )
-            "
-            [routerLink]="'/aliment'"
+           "
           >
             Ajouter
           </button>

@@ -1,12 +1,12 @@
 .profil-banner {
     background-color: #225777;
     color: white;
-    height: 200px;
+    height: 12.5rem;
 }
 
 .zoneProfil {
     align-self: flex-end;
-    margin: 20px;
+    margin: 1.25rem;
 }
 
 .zoneVierge {
@@ -14,12 +14,12 @@
 }
 
 p {
-    margin: 5px;
+    margin: 0.31rem;
     line-height: normal;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .btnModifier {
@@ -27,7 +27,7 @@ h1 {
     margin: 0;
     border-radius: 2rem;
     width: 8rem;
-    height: 28px;
+    height: 1.75rem;
     color: #303030;
     border: none;
     font-size: 1rem;
@@ -38,7 +38,7 @@ h1 {
     margin: 0;
     border-radius: 2rem;
     width: 8rem;
-    height: 28px;
+    height: 1.75rem;
     border: none;
     font-size: 1rem;
     font-size: 1rem;
@@ -61,8 +61,8 @@ h1 {
 }
 
 .avatar-circle {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     border-radius: 50%;
     border: solid;
     background-color: #982312;

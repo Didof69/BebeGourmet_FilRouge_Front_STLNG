@@ -1,6 +1,6 @@
 /* modif du margin top */
 .container {
-    margin-top: 2rem;
+    margin-top: 3rem;
     width: 40vw;
 }
 
@@ -40,6 +40,11 @@ padding left*/
     display: flex;
     line-height: 38px;
     padding-left: 2.5rem;
+}
+
+/* ajout placeholder opacité sur les input pour avoir la meme partout */
+::placeholder {
+    opacity: 0.6;
 }
 
 /* supp du Xlarge,  padding left*/

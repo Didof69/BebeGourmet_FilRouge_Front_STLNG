@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
-<ng-container *ngIf="affichage">
-  <div *ngIf="utilisateur">
+<ng-container *ngIf="affichage" >
+  <div *ngIf="utilisateur" class="background">
     <app-profil-utilisateur [profil]="utilisateur"></app-profil-utilisateur>
     <div class="d-flex flex-wrap justify-content-center container-principal">
       <app-card-enfant

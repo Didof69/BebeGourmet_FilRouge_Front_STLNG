@@ -86,7 +86,6 @@ export class AjoutEnfantComponent {
   ajoutEnfant() {
     // this.onChangeRestric;
     this.enfant.restrictions = this.checkedRestrictions;
-    console.log('je recoie1', this.enfant);
     this.utilisateurService.addEnfantByUser(this.enfant).subscribe({
       next: (response) => {
        this.router.navigate([`/profil-utilisateur`])

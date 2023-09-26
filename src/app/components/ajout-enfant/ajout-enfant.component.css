@@ -6,11 +6,17 @@
     flex-direction: column;
 }
 
+
 h1 {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
     width: 100%;
+}
+
+::placeholder,
+label {
+    color: #303030;
 }
 
 h2 {

@@ -5,7 +5,7 @@
 p {
     color: #982312;
     font-weight: 600;
-    width: auto;
+    font-size: 1.5rem;
 }
 
 .card-enfant {
@@ -13,20 +13,19 @@ p {
 }
 
 .card {
-    border-radius: 20px;
-    width: 400px;
-    height: 180px;
+    border-radius: 1.25rem;
+    width: 25rem;
+    height: 11.25rem;
 }
 
 img {
     padding: 10px;
-
 }
 
 button {
-    border-radius: 20px;
+    border-radius: 1.25rem;
     border: none;
-    width: 400px;
-    height: 180px;
+    width: 25rem;
+    height: 11.25rem;
     margin: 1rem;
 }

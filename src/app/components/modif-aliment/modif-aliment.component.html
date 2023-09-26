@@ -1,38 +1,48 @@
 <app-navbar></app-navbar>
+<!-- ajout des rajout de    [disabled]="blockSelect" pour lock les input
+ajout des ngif pour le switch
+ajout des methode au click
+ajout d'un h1 et p pour le switch
+ajout des btn + route
+ -->
 <div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-md-6">
+  <div class="">
+    <div class="">
       <form>
-        <h1 class="text-center mb-4">Modifier un aliment</h1>
-        <p class="text-center">
-          Indiquez les éléments que vous souhaitez modifier
+        <h1 *ngIf="hidden" class="">Modifier un aliment</h1>
+        <h1 *ngIf="hidden1" class="letterSpacing">
+          Confirmer la modification ?
+        </h1>
+        <p *ngIf="hidden" class="letterSpacing">
+          Indiquez les éléments que vous souhaitez modifier.
         </p>
 
         <!-- Champs "Nom" -->
         <div class="form-group">
           <input
+            [disabled]="blockSelect"
             #libelle
             type="text"
-            class="form-control custom-input"
+            class="form-control inputStyle"
             id="Libelle"
-            placeholder="Nom"
-            value="{{ aliment.libelle }}"
+            placeholder="{{ aliment.libelle }}*"
             required
           />
         </div>
 
-        <!-- Champs "Catégorie" -->
+        <!-- Champs "Catégorie" supp des 2 acolade qui trainait -->
         <div class="form-group">
           <ng-select
+            [disabled]="blockSelect"
             [items]="categorie"
+            placeholder="Catégorie(s)*"
             [multiple]="true"
             bindLabel="libelle"
             [(ngModel)]="selectedCategorie"
             [ngModelOptions]="{ standalone: true }"
             [maxSelectedItems]="1"
             bindValue="id"
-            placeholder="Catégorie"
-            class="custom-input"
+            class="custom"
           >
           </ng-select>
         </div>
@@ -40,12 +50,12 @@
         <!-- Champs "Age d'introduction" -->
         <div class="form-group">
           <input
+            [disabled]="blockSelect"
             #age_introduction
             type="text"
-            class="form-control custom-input"
-            id="Age_introduction"
-            placeholder="Age d'introduction"
-            value="{{ aliment.age_introduction }}"
+            class="form-control inputStyle"
+            id="Age_introduction*"
+            placeholder="Age d'introduction*"
             required
           />
         </div>
@@ -53,38 +63,67 @@
         <!-- Champs "Saison(s)" -->
         <div class="form-group">
           <ng-select
+            [disabled]="blockSelect"
             [items]="saisons"
             [multiple]="true"
             bindLabel="libelle"
             [(ngModel)]="selectedSaisons"
             [ngModelOptions]="{ standalone: true }"
             [maxSelectedItems]="3"
-            placeholder="Saison(s)"
-            class="custom-input"
+            placeholder="saison(s)*"
+            class="custom"
           >
           </ng-select>
         </div>
 
-        <!-- Champs "Restriction(s)" -->
+        <!-- Champs "Restriction(s)"  -->
         <div class="form-group">
           <ng-select
+            [disabled]="blockSelect"
             [items]="restrictions"
             [multiple]="true"
             bindLabel="libelle"
             [(ngModel)]="selectedRestrictions"
             [ngModelOptions]="{ standalone: true }"
             placeholder="Restriction(s)"
-            class="custom-input"
+            class="custom"
           >
           </ng-select>
         </div>
 
+        <div class="">
+          <p *ngIf="hidden" class="zone-signup lowSize">
+            * : Champs Obligatoires
+          </p>
+        </div>
         <!-- Bouton "Ajouter" -->
-        <div class="form-group">
+        <div class="d-flex justify-content-center">
+          <button
+            (click)="changediv()"
+            *ngIf="hidden"
+            type="button"
+            class="btn btn-color btn-block btnModele"
+          >
+            Modifier
+          </button>
+          <button
+            *ngIf="hidden"
+            type="button"
+            class="btn btn-color btn-block btnModeleRed"
+            routerLink="/aliment"
+          >
+            Retour
+          </button>
+        </div>
+
+        <!-- Bouton "Ajouter" -->
+        <div
+          class="form-group testfont d-flex justify-content-center"
+          *ngIf="hidden1"
+        >
           <button
             type="button"
-            class="btn btn-color btn-block"
-            [routerLink]="['/aliment']"
+            class="btn btnModele"
             (click)="
               updateAliment(
                 libelle.value,
@@ -95,11 +134,21 @@
               )
             "
           >
-            Modifier
+            Confirmer
+          </button>
+
+          <button
+            (click)="changediv()"
+            type="button"
+            class="btn btn-color btn-block btnModeleRed"
+            *ngIf="hidden1"
+          >
+            Retour
           </button>
         </div>
       </form>
     </div>
   </div>
 </div>
+
 <app-footer></app-footer>
