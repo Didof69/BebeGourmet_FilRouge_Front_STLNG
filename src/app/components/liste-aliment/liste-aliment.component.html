@@ -1,17 +1,25 @@
-<div class="container-fluid d-flex row justify-content-center container-principal">
-  <div class="container-title">
-    <h1>Liste des aliments</h1>
+<div
+  class="container-fluid d-flex row justify-content-center container-principal"
+>
+  <div class="tst">
+    <div class="taille"></div>
 
-    <button
-      *ngIf="profilUtilisateur"
-      id="btnAjouter"
-      [routerLink]="['/aliment/ajouter']"
-      routerLinkActive="router-link-active"
-    >
-      Ajouter un aliment
-    </button>
+    <div class="container-title">
+      <h2>Liste des aliments</h2>
+    </div>
+
+    <div class="btn-top taille">
+      <button
+        *ngIf="profilUtilisateur"
+        id="btnAjouter"
+        [routerLink]="['/aliment/ajouter']"
+        routerLinkActive="router-link-active"
+        class=""
+      >
+        Ajouter un aliment
+      </button>
+    </div>
   </div>
-
   <div class="container-aliments card">
     <div class="scroller">
       <table class="table table-striped">
@@ -24,7 +32,7 @@
             <th *ngIf="profilUtilisateur" class="autre-info"></th>
           </tr>
         </thead>
-        <tbody class="ligne-shadow-hover">
+        <tbody>
           <tr *ngFor="let aliment of aliments">
             <td>{{ aliment.libelle }}</td>
             <td>{{ aliment.age_introduction }} mois</td>
@@ -36,7 +44,7 @@
                 </li>
               </ul>
             </td>
-            <td *ngIf="profilUtilisateur" class="zone-boutons">
+            <td *ngIf="profilUtilisateur" class="">
               <button
                 class="btn modifier"
                 [routerLink]="['/aliment/modifier/', aliment.id]"

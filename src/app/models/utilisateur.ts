@@ -6,6 +6,7 @@ export interface Utilisateur {
   prenom: string;
   email: string;
   mot_de_passe?: string;
+  mot_de_passe_confirme?: string;
   admin: boolean;
   enfants?: Enfant[];
 }

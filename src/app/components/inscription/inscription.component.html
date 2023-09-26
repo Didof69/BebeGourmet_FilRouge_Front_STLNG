@@ -6,25 +6,59 @@
     <p>Inscrivez-vous pour profiter de toutes les fonctionnalités.</p>
     </div>
 
-    <form (ngSubmit)="inscrire()">
+    <form #inscription="ngForm" (ngSubmit)="inscrire(inscription)">
         <div class="form-group">
-        <input type="text" class="form-control shadow-sm" [(ngModel)]="utilisateur.nom" name="nom" placeholder="Nom">
+            <input type="text" required class="form-control shadow-sm"
+                [(ngModel)]="utilisateur.nom" name="nom" #nom="ngModel"
+                [class.input-error]="nom.invalid && isFormSubmit" placeholder="Nom">
+            <div *ngIf="nom.invalid && isFormSubmit" class="alert">
+                <div *ngIf="nom.errors?.['required']">Ce champ est obligatoire.</div>
+            </div>
         </div>
+
         <div class="form-group">
-        <input type="text" class="form-control shadow-sm" [(ngModel)]="utilisateur.prenom" name="prenom" placeholder="Prénom">
+            <input type="text" required class="form-control shadow-sm" 
+                [(ngModel)]="utilisateur.prenom" name="prenom" #prenom="ngModel" 
+                [class.input-error]="prenom.invalid && isFormSubmit" placeholder="Prenom">
+            <div *ngIf="prenom.invalid && isFormSubmit" class="alert">
+                <div *ngIf="prenom.errors?.['required']">Ce champ est obligatoire.</div>
+            </div>
         </div>
+
+            <div class="form-group">
+                <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control shadow-sm"
+                    [(ngModel)]="utilisateur.email" name="email" #email="ngModel"
+                    [class.input-error]="email.invalid && isFormSubmit" placeholder="Email">
+                <div *ngIf="email.invalid && isFormSubmit" class="alert">
+                    <div *ngIf="email.errors?.['required']">L'email est obligatoire.</div>
+                    <div *ngIf="email.errors?.['pattern']">Veuillez entrer une adresse email valide.</div>
+                </div>
+            </div>
+
         <div class="form-group">
-        <input type="text" class="form-control shadow-sm" [(ngModel)]="utilisateur.email" name="email" placeholder="Email">
+            <input type="password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}"
+                class="form-control shadow-sm" [(ngModel)]="utilisateur.mot_de_passe" name="mot_de_passe" #password="ngModel"
+                [class.input-error]="password.invalid && isFormSubmit" placeholder="Mot de passe">
+            <div *ngIf="password.invalid && isFormSubmit" class="alert">
+                <div *ngIf="password.errors?.['required']">Le mot de passe est obligatoire.</div>
+                <div *ngIf="password.errors?.['pattern']">Doit contenir au moins 12 caractères, 1 majuscule, 1 chiffre et 1 symbole.</div>
+            </div>
         </div>
+
         <div class="form-group">
-        <input type="password" class="form-control shadow-sm" [(ngModel)]="utilisateur.mot_de_passe" name="mot_de_passe" placeholder="Mot de passe">
-        </div>     
+            <input type="password" required class="form-control shadow-sm" 
+                [(ngModel)]="utilisateur.mot_de_passe_confirme" name="mot_de_passe_confirme" #password="ngModel"
+                [class.input-error]="utilisateur.mot_de_passe !== utilisateur.mot_de_passe_confirme && isFormSubmit " placeholder="Confirmez votre mot de passe">
+            <div *ngIf="utilisateur.mot_de_passe !== utilisateur.mot_de_passe_confirme && isFormSubmit" class="alert">
+                Les mots de passe ne correspondent pas.
+            </div>
+        </div>
 
         <button type="submit" class="btn btn-primary">S'enregistrer</button>
     </form>
 
     <div class="lienConnexion">
-        <p >Déjà un compte ? <a [routerLink]="['/profil-utilisateur']" >Connectez-vous</a> 
+        <p >Déjà un compte ? <a [routerLink]="['/profil-utilisateur']">Connectez-vous</a> 
     </div>
    
 </div>

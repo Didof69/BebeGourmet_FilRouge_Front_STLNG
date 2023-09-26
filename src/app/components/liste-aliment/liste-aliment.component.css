@@ -1,11 +1,39 @@
-.container-title {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    width: 70rem;
+.container-principal {
+    margin-top: 0.5rem;
+    width: 100%;
 }
 
-.ligne-shadow-hover :hover{
+.container-title {
+    width: 50vw;
+}
+
+.taille {
+    width: 25%;
+}
+
+.btn-top {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+h2 {
+    width: 100%;
+    padding: 0;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.tst {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 70%;
+    height: 3.5rem;
+}
+
+.ligne-shadow-hover :hover {
     font-weight: bolder;
 }
 
@@ -21,12 +49,13 @@ li {
 }
 
 .container-aliments {
+    margin-top: 0.5rem;
     width: 70%;
     height: 60vh;
 }
 
+
 .btn {
-    margin: 0;
     border-radius: 2rem;
     width: 3.38rem;
     /* height: 1.75rem; */
@@ -52,12 +81,9 @@ li {
     border: none;
     cursor: pointer;
     border-radius: 2rem;
-    height: 1.75rem;
-    margin: 0;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    height: 2.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .scroller {

@@ -2,7 +2,23 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 7.5rem;
+    padding-top: 3.5rem;
+}
+
+.card {
+    align-items: center;
+    text-align: center;
+    border-radius: 1.2rem;
+    height: 12rem;
+    width: 20rem;
+    box-shadow: 0 0 0.94rem -0.25rem #225777;
+    background-size: cover;
+    background-image: url(../../../assets/4bébé.jpg);
+}
+
+h2 {
+    color: #982312;
+    margin-top: 1.5rem;
 }
 
 #btnSupprimer {
@@ -14,7 +30,7 @@
     border-radius: 1.88rem;
     width: 12rem;
     height: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
 }
 
 .btnAnnuler {
@@ -26,7 +42,7 @@
     border-radius: 1.88rem;
     width: 12rem;
     height: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
 }
 
 button {
@@ -36,6 +52,6 @@ button {
 p {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    padding: 2.5rem;
+    margin-top: 1rem;
     font-size: 1.5rem;
 }
