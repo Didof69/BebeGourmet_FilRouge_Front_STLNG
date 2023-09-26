@@ -9,9 +9,10 @@
     margin: 20px;
 }
 
-.zoneVierge{
-    width : 14rem;
+.zoneVierge {
+    width: 14rem;
 }
+
 p {
     margin: 5px;
     line-height: normal;
@@ -30,10 +31,28 @@ h1 {
     color: #303030;
     border: none;
     font-size: 1rem;
+    margin-right: 1rem;
 }
+
+.btnSupprimer {
+    margin: 0;
+    border-radius: 2rem;
+    width: 8rem;
+    height: 28px;
+    border: none;
+    font-size: 1rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #982312;
+}
+
 
 .btnModifier:hover {
     background-color: #9CB3B1;
+}
+
+.btnSupprimer:hover {
+    background-color: #491108;
 }
 
 
@@ -65,7 +84,7 @@ h1 {
     left: 0;
 }
 
-.tst{
+.tst {
     margin-bottom: 2rem;
     margin-top: 1rem;
 }

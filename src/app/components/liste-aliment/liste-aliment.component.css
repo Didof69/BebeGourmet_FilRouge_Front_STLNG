@@ -6,6 +6,10 @@
     /* margin-top: 0.5rem; */
 }
 
+.ligne-shadow-hover :hover{
+    font-weight: bolder;
+}
+
 li {
     list-style-type: none;
     font-size: 14px;

@@ -114,7 +114,7 @@ export class ProfilEnfantComponent {
   }
 
   modifierEnfant() {
-    this.router.navigate([`profil-utilisateur/child/update/${this.enfant.id}`]);
+    this.router.navigate([`profil-utilisateur/child/modifier/${this.enfant.id}`]);
   }
 
   restrictionsTabPersonnalise() {

@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="mainContainer" *ngIf="enfant">
+  <div>
+    <p>{{ enfant.prenom }} :</p>
+  </div>
+
+  <div><p>Etes-vous sûr de vouloir supprimer ce profil Enfant ?</p></div>
+
+  <div>
+    <button
+      type="submit"
+      id="btnSupprimer"
+      [routerLink]="['/profil-utilisateur']"
+      (click)="deleteEnfant(enfant)"
+    >
+      Oui, supprimer
+    </button>
+    <button class="btnAnnuler" [routerLink]="['/child/:id']">Non, annuler</button>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -36,4 +36,16 @@ export class EnfantService {
       }
     );
   }
+
+  deleteEnfant(enfant :Enfant): Observable<Enfant> {
+    // recup le token dans le localstorage
+    const headers = this.setHeaders();
+    console.log('dans delete',enfant);
+    
+    // console.log(headers);
+    return this.http.delete<Enfant>(
+      `http://localhost:3000/api/enfants/${enfant.id}`,
+      { headers }
+    );
+  }
 }

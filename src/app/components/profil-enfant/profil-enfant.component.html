@@ -11,7 +11,11 @@
         <img id="avatar" src="../../../assets/Baby-blanc.png" alt="" />
       </div>
       <h1>{{majusculeFirst()}}</h1>
+      <div>
       <button class="btnModifier" (click)="modifierEnfant()">Modifier</button>
+      <button class="btnSupprimer" [routerLink]="['/profil-utilisateur/child/supprimer/', enfant.id]">Supprimer</button>
+      </div>
+    
     </div>
 
     <div>
