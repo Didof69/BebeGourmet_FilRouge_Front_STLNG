@@ -17,7 +17,6 @@
     padding-top: 1rem;
 }
 
-/* ombre uniquement pour le bouton en excluant ce qu'il y a dedans */
 .button-shadow-hover:not(.plusAjouter *):hover {
     box-shadow: 0px 0px 0.94rem -0.25rem #225777;
 }
@@ -25,7 +24,5 @@
 .background {
     background-image: url(../../../assets/image-bébés.jpg);
     background-repeat: repeat;
-    /* background-position:center; */
     background-size: contain;
-
 }

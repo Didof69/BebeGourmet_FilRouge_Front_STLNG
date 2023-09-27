@@ -19,7 +19,7 @@ export class SupprAlimentComponent {
 
   ngOnInit() {
     //reoriente quand pas admine vers 404
-    if (localStorage.getItem('profilUtilisateur') != 'true') {
+    if (sessionStorage.getItem('profilUtilisateur') != 'true') {
       this.router.navigate(['/**']);
     }
 
@@ -29,7 +29,6 @@ export class SupprAlimentComponent {
     this.alimentService
       .getAlimentById(alimentIdFromRoute)
       .subscribe((aliment) => {
-        // console.log('infos récupéré', aliment);
         // ma requête http pour la récupe de l'ID
         this.aliment = aliment;
         // initialisation de la propriété de plant comme étant les données qu'on récupère de la BDD.
@@ -37,13 +36,11 @@ export class SupprAlimentComponent {
   }
 
   deleteAliment(aliment: Aliment) {
-    // console.log('id plante à supprimer :', aliment);
     this.alimentService.deleteAliment(aliment).subscribe({
       next: (response) => {
         this.router.navigate([`/aliment`]);
       },
-      error: (error) => {
-      },
+      error: (error) => {},
     });
   }
 }

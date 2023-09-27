@@ -5,7 +5,8 @@
     <div class="taille"></div>
 
     <div class="container-title">
-      <h2>Liste des aliments</h2>
+      <h2 *ngIf="!enfant">Liste des aliments</h2>
+      <h2 *ngIf="enfant" style="font-size: 1.2rem;">Liste des aliments adaptée à {{enfant.prenom}}</h2>
     </div>
 
     <div class="btn-top taille">
@@ -14,8 +15,7 @@
         id="btnAjouter"
         [routerLink]="['/aliment/ajouter']"
         routerLinkActive="router-link-active"
-        class=""
-      >
+        class="">
         Ajouter un aliment
       </button>
     </div>
@@ -32,12 +32,12 @@
             <th *ngIf="profilUtilisateur" class="autre-info"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="ligne-shadow-hover">
           <tr *ngFor="let aliment of aliments">
-            <td>{{ aliment.libelle }}</td>
-            <td>{{ aliment.age_introduction }} mois</td>
-            <td>{{ aliment.category.libelle }}</td>
-            <td>
+            <td data-title="Libellé">{{ aliment.libelle }}</td>
+            <td data-title="A partir de">{{ aliment.age_introduction }} mois</td>
+            <td data-title="Catégorie">{{ aliment.category.libelle }}</td>
+            <td data-title="Saison">
               <ul class="list-group">
                 <li *ngFor="let saison of aliment.saisons">
                   {{ saison.libelle }}

@@ -41,13 +41,12 @@ export class ModifAlimentComponent implements OnInit {
 
   ngOnInit() {
     //réoriente vers 404 si pas admin
-    if (localStorage.getItem('profilUtilisateur') != 'true') {
+    if (sessionStorage.getItem('profilUtilisateur') != 'true') {
       this.router.navigate(['/**']);
     }
 
     // Obtenez le paramètre 'id' depuis la route
     const alimentIdFromRoute = Number(this.route.snapshot.paramMap.get('id'));
-    console.log('is this the good idea ? ', alimentIdFromRoute);
 
     // Utilisez l'ID récupéré pour obtenir l'objet Aliment correspondant
     this.alimentService.getAlimentById(alimentIdFromRoute).subscribe((data) => {
@@ -93,7 +92,6 @@ export class ModifAlimentComponent implements OnInit {
       saisons: saisons,
       restrictions: restrictions,
     };
-    console.log(updateAliment);
     this.alimentService
       .updateAliment(this.aliment.id, updateAliment)
       .subscribe((data) => {

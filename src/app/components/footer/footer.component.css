@@ -18,3 +18,12 @@ li {
     margin-right: 1rem;
     font-size: 0.88rem;
 }
+
+/* Media Queries */
+@media (max-width: 760px) {
+    .droitReserve {
+    width: 40%;
+    text-align: center;
+    font-size: 0.8rem;
+}
+}

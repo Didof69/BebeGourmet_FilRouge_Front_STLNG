@@ -44,7 +44,6 @@ export class ProfilEnfantComponent {
 
     this.enfantService.getProfilEnfant(enfantIdFromRoute).subscribe({
       next: (response) => {
-        // console.log('retour get enfant:', response);
         this.enfant = response;
         this.restrictionsTabPersonnalise();
         this.ageEnfant = this.calculerAgeEnMois(this.enfant.date_naissance);
@@ -54,7 +53,6 @@ export class ProfilEnfantComponent {
           this.extraireAlimentsInterdits();
           this.filtrerAge();
           this.trierTabFiltre(this.alimentsToDisplayFilter); //trier par odre alpha le tableau
-          console.log('tab initial', this.alimentsToDisplayFilter);
 
           //initialise le tableau des catégories
           this.tabCategories = [
@@ -79,8 +77,6 @@ export class ProfilEnfantComponent {
 
           this.tabCategories.sort();
           this.tabSaisons.sort();
-          // console.log('catéories :' + this.tabCategories);
-          // console.log('tableau des saisons' + this.tabSaisons);
 
           //initialise les filtres à afficer grâce aux tableaux des filtres
           this.saveFilterTab = {
@@ -89,9 +85,7 @@ export class ProfilEnfantComponent {
           };
         });
       },
-      error: (error) => {
-        console.log('Echec get enfant', error);
-      },
+      error: (error) => {},
     });
   }
 
@@ -129,7 +123,6 @@ export class ProfilEnfantComponent {
       }
     });
     this.tabRestrictions.sort();
-    console.log('tableau des restrictions perso' + this.tabRestrictions);
   }
 
   majusculeFirst() {
@@ -168,7 +161,6 @@ export class ProfilEnfantComponent {
   //cette methode permet d'iterer sur un aliment et de renvoyer un boolean nécessaire pour que le .include fasse le taf dans extraireAlimentsInterdits()
   filtreRestriction(e: Aliment): boolean {
     for (let i = 0; i < e.restrictions.length; i++) {
-      // console.log("coucou c'est moi", e.restrictions[i].libelle);
       if (this.tabRestrictions.includes(e.restrictions[i].libelle)) {
         return true;
       }
@@ -192,13 +184,11 @@ export class ProfilEnfantComponent {
       .filter((e) => !this.filtreRestriction(e))
       .sort();
     this.alimentsToDisplayFilter = this.alimentsToDisplayRestriction;
-    console.log('tab restriction', this.alimentsToDisplayFilter);
   }
 
   //sauvegarde des filtres à afficher
   //  rechercher le bon typage
   saveFilter(saveFilter: any) {
-    // console.log(this.alimentsToDisplayRestriction);
     if (
       this.saveFilterTab.categorie.length >= 1 ||
       this.saveFilterTab.saisons.length >= 1

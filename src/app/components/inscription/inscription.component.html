@@ -26,7 +26,7 @@
         </div>
 
             <div class="form-group">
-                <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control shadow-sm"
+                <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control shadow-sm"
                     [(ngModel)]="utilisateur.email" name="email" #email="ngModel"
                     [class.input-error]="email.invalid && isFormSubmit" placeholder="Email">
                 <div *ngIf="email.invalid && isFormSubmit" class="alert">

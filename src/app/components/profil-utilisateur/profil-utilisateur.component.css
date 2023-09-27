@@ -16,7 +16,6 @@
 
 .admin-indicator {
     position: absolute;
-    /* ajout d'une position absolute avec son right et d'un padding pour aligner le tout*/
     right: 0;
     padding-right: 1.56rem;
     bottom: 20;
@@ -61,12 +60,9 @@
 
 .btnDeconnect {
     position: absolute;
-    /* ajout d'une position absolute pour bouger l'element dans l'élément*/
     right: 0;
-    /* avec son right */
     display: block;
     margin: 1.88rem 1.56rem;
-    /* ajout d'un margin sur les coté pour eloigner du bord droit*/
     background-color: #982312;
     border: none;
     color: white;

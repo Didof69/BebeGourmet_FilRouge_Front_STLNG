@@ -28,14 +28,10 @@ export class ConnexionComponent {
     if (connexionForm.valid) {
       this.utilisateurService.connexionUtilisateur(this.utilisateur).subscribe({
         next: (response) => {
-          console.log('Connexion réussie:', response);
-          console.log('Token reçu:', response.accessToken);
-
-          localStorage.setItem('token', response.accessToken);
+          sessionStorage.setItem('token', response.accessToken);
           location.reload(); //recharge la page actuelle
         },
         error: (error) => {
-          console.log('Échec de la connexion', error);
         },
       });
     }

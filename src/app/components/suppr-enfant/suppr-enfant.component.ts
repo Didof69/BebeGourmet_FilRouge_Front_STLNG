@@ -25,10 +25,8 @@ export class SupprEnfantComponent {
     this.enfantService
       .getProfilEnfant(enfantIdFromRoute)
       .subscribe((enfant) => {
-        // console.log('infos récupéré', aliment);
         // ma requête http pour la récupe de l'ID
         this.enfant = enfant;
-        // initialisation de la propriété de plant comme étant les données qu'on récupère de la BDD.
       });
   }
 
@@ -37,8 +35,7 @@ export class SupprEnfantComponent {
       next: (response) => {
         this.router.navigate([`/profil-utilisateur`]);
       },
-      error: (error) => {
-      },
+      error: (error) => {},
     });  
   }
 }

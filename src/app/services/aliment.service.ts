@@ -11,7 +11,7 @@ export class AlimentService {
   constructor(private http: HttpClient) {}
 
   setHeaders() {
-    const jwtToken = localStorage.getItem('token');
+    const jwtToken = sessionStorage.getItem('token');
     const headers = new HttpHeaders({
       Authorization: `Bearer ${jwtToken}`,
     });
@@ -23,7 +23,7 @@ export class AlimentService {
   }
 
   createAliment(aliment: CreateAliment): Observable<Aliment> {
-    // recup le token dans le localstorage
+    // recup le token dans le sessionstorage
     // const headers = this.setHeaders();
     const headers = this.setHeaders();
     return this.http.post<Aliment>(
@@ -55,9 +55,8 @@ export class AlimentService {
   }
 
   deleteAliment(aliment: Aliment): Observable<Aliment> {
-    // recup le token dans le localstorage
+    // recup le token dans le sessionstorage
     const headers = this.setHeaders();
-    // console.log(headers);
     return this.http.delete<Aliment>(
       `http://localhost:3000/api/aliments/${aliment.id}`,
       { headers }

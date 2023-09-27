@@ -40,7 +40,7 @@ export class AjoutAlimentComponent implements OnInit {
 
   ngOnInit() {
     //réoriente vers 404 si pas admin
-    if (localStorage.getItem('profilUtilisateur') != 'true') {
+    if (sessionStorage.getItem('profilUtilisateur') != 'true') {
       this.router.navigate(['/**']);
     }
 

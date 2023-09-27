@@ -6,7 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./commencer.component.css']
 })
 export class CommencerComponent {
-ngOnInit(){
-localStorage.clear()
-}
 }

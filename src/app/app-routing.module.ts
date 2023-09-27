@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'profil-utilisateur/ok', component: UtilisateurComponent },
   { path: 'profil-utilisateur/inscription', component: InscriptionComponent },
   { path: 'profil-utilisateur/connexion', component: ConnexionComponent },
-  { path: 'profil-utilisateur/child/add', component: AjoutEnfantComponent },
+  { path: 'profil-utilisateur/child/ajouter', component: AjoutEnfantComponent },
   {
     path: 'profil-utilisateur/child/supprimer/:id',
     component: SupprEnfantComponent,

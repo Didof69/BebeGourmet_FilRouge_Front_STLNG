@@ -21,14 +21,12 @@ export class UtilisateurComponent {
     // this.subUser$ = this.utilisateurService.getProfilUtilisateur(); //à creuser
     this.utilisateurService.getProfilUtilisateur().subscribe({
       next: (response) => {
-        console.log('retour get user:', response);
         this.affichage = true; //modifie le composant à afficher
         this.utilisateur = response;
         this.enfants = response.enfants;
       },
       error: (error) => {
         this.affichage = true; //modifie le composant à afficher
-        console.log('Echec get user', error);
       },
     });
   }

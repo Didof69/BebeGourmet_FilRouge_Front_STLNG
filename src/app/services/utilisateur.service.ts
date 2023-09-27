@@ -15,7 +15,7 @@ export class UtilisateurService {
   constructor(private http: HttpClient) {}
 
   setHeaders() {
-    const jwtToken = localStorage.getItem('token');
+    const jwtToken = sessionStorage.getItem('token');
     const headers = new HttpHeaders({
       Authorization: `Bearer ${jwtToken}`,
     });
@@ -42,7 +42,7 @@ export class UtilisateurService {
       .get<Utilisateur>(`${this.baseApiUrl}/utilisateurs`, { headers })
       .pipe(
         tap((utilisateur: Utilisateur) => {
-          localStorage.setItem(
+          sessionStorage.setItem(
             'profilUtilisateur',
             utilisateur.admin.toString()
           );
@@ -51,9 +51,7 @@ export class UtilisateurService {
   }
 
   addEnfantByUser(enfant: Enfant): Observable<Utilisateur> {
-    console.log(enfant);
     const headers = this.setHeaders();
-    console.log(enfant);
 
     return this.http.post<Utilisateur>(
       `http://localhost:3000/api/enfants`,
