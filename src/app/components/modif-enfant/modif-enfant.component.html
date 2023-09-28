@@ -40,7 +40,21 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary btnModele">Modifier</button>
+    <!--Ajout d'une div pour rassembler les 2 boutons avec class btstrap, 
+      remplacement du bouton confimer pour coorelation avec les autres (class nom etc...),
+       et ajout du bouton retour avec routerlink,
+     modif btstrap center-->
+    <div class="form-group testfont d-flex justify-content-center m-3">
+      <button type="submit" class="btn btn-primary btnModele">Confirmer</button>
+
+      <button
+        [routerLink]="['/profil-utilisateur/child/', enfant.id]"
+        type="button"
+        class="btn btn-color btn-block btnModeleRed"
+      >
+        Retour
+      </button>
+    </div>
   </form>
 </div>
 

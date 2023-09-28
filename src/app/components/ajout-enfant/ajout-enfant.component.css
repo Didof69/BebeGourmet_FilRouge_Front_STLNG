@@ -1,83 +1,94 @@
 .mainContainer {
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-
 h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 ::placeholder,
 label {
-    color: #303030;
+  color: #303030;
 }
 
 h2 {
-    font-size: medium;
-    display: flex;
-    justify-content: center;
-    margin-top: 0.5rem;
-    width: 100%;
+  font-size: medium;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .style-input {
-    background-color: rgba(34, 87, 119, 0.2);
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    padding-left: 2.5rem;
-    width: 50rem;
-    height: 2.7rem;
+  background-color: rgba(34, 87, 119, 0.2);
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+  width: 50rem;
+  height: 2.7rem;
 }
 
 .position-input {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .box {
-    background-color: rgba(34, 87, 119, 0.2);
-    border-radius: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 50rem;
-    margin-top: 0.5rem;
-    padding: 1.5rem;
+  background-color: rgba(34, 87, 119, 0.2);
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50rem;
+  margin-top: 0.5rem;
+  padding: 1.5rem;
 }
 
 .position {
-    width: 15rem;
+  width: 15rem;
 
-    margin-top: 0.3rem;
+  margin-top: 0.3rem;
 }
-
+/* changement du nom des class liées au bouton confirmer */
 .btnModele {
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #225777;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-    width: 12rem;
-    height: 2.5rem;
-    margin-top: 1.5rem;
-    width: 50rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #225777;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.88rem;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+/* ajout de la class du bouton retour */
+.btnModeleRed {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #982312;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.88rem;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
 }
 
 .checkbox-space {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 label {
-    cursor: pointer;
+  cursor: pointer;
 }

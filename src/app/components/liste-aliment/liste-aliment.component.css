@@ -1,108 +1,106 @@
 .container-principal {
-    margin-top: 0.5rem;
-    width: 100%;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .container-title {
-    width: 50vw;
+  width: 50vw;
 }
 
 .taille {
-    width: 25%;
+  width: 25%;
 }
 
 .btn-top {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    flex-wrap: wrap;
-    /*Responsive*/
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-wrap: wrap;
+  /*Responsive*/
 }
 
 h2 {
-    width: 100%;
-    padding: 0;
-    line-height: 1.7;
-    margin: 0;
+  width: 100%;
+  padding: 0;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .tst {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: 70%;
-    height: 3.5rem;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  height: 3.5rem;
 }
 
 .ligne-shadow-hover :hover {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 li {
-    list-style-type: none;
-    font-size: 0.88rem;
-    line-height: 1rem;
-    padding-left: 0;
+  list-style-type: none;
+  font-size: 0.88rem;
+  line-height: 1rem;
+  padding-left: 0;
 }
 
 .autre-info {
-    width: 15%;
+  width: 15%;
 }
 
 .container-aliments {
-    margin-top: 0.5rem;
-    width: 70%;
-    height: 60vh;
+  margin-top: 0.5rem;
+  width: 70%;
+  height: 60vh;
 }
 
-
 .btn {
-    border-radius: 2rem;
-    width: 3.38rem;
-    color: white;
-    border: none;
-    font-size: 0.5rem;
+  border-radius: 2rem;
+  width: 3.38rem;
+  color: white;
+  border: none;
+  font-size: 0.5rem;
 }
 
 .modifier {
-    background-color: #225777;
-    margin-right: 0.2rem;
+  background-color: #225777;
+  margin-right: 0.2rem;
 }
 
 .supprimer {
-    background-color: #982312;
+  background-color: #982312;
 }
 
 #btnAjouter {
-    font-size: 1rem;
-    color: #FFFFFF;
-    background-color: #225777;
-    border: none;
-    cursor: pointer;
-    border-radius: 2rem;
-    height: 2.3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    white-space: nowrap;
-    /*Empêche saut à la ligne */
-    width: auto;
-    /*Responsive*/
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #225777;
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  height: 2.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  white-space: nowrap;
+  /*Empêche saut à la ligne */
+  width: auto;
+  /*Responsive*/
 }
 
 /* Fixer l'en-tête */
 .scroller {
-    overflow-y: auto;
-    height: 60vh;
+  overflow-y: auto;
+  height: 60vh;
 }
 
 thead th {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
-
 
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
@@ -116,9 +114,10 @@ thead th {
         height: 60vh;
     }
 
-    .container-title, .tst {
-        width: 100%;
-    }
+  .container-title,
+  .tst {
+    width: 100%;
+  }
 
     .container-title h2 {
         font-size: 1.2rem;
@@ -137,30 +136,30 @@ thead th {
         height: 2.5rem;
     }
 
-    #btnAjouter {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-        white-space: nowrap;
-        /*Empêche saut à la ligne */
-        overflow: hidden;
-        /* Cacher le texte qui dépasse */
-        text-overflow: ellipsis;
-        /* Trois petits */
-        width: 100%;
-    }
+  #btnAjouter {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+    /*Empêche saut à la ligne */
+    overflow: hidden;
+    /* Cacher le texte qui dépasse */
+    text-overflow: ellipsis;
+    /* Trois petits */
+    width: 100%;
+  }
 
-    table {
-        margin-top: 0.8rem;
-    }
+  table {
+    margin-top: 0.8rem;
+  }
 
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block
-    }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
     thead tr {
         position: absolute;
@@ -168,14 +167,14 @@ thead th {
         left: -624.94rem;
     }
 
-    td {
-        position: relative;
-        padding-left: 50%;
-        white-space: normal;
-        text-align: left;
-        width: auto;
-        line-height: 1rem;
-    }
+  td {
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+    width: auto;
+    line-height: 1rem;
+  }
 
     td:before {
         position: absolute;
