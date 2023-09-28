@@ -19,3 +19,9 @@ body {
     height: 12em;
     position: absolute;
 }
+
+@media only screen and (max-width: 40rem) {
+    .svg{
+        z-index: 1;
+    }
+}

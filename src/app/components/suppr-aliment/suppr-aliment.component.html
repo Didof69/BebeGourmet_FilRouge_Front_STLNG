@@ -1,20 +1,24 @@
 <app-navbar></app-navbar>
 <div class="mainContainer" *ngIf="aliment">
-  <div class="card">
-    <div class=""></div>
-  </div>
+  <!-- <div class="miseenpage"> -->
+    <div class="card">
+      <div class=""></div>
+    </div>
 
-  <div>
-    <h2>{{ aliment.libelle }}</h2>
-  </div>
+    <div>
+      <h2>{{ aliment.libelle }}</h2>
+    </div>
 
-  <div><p>Etes-vous sûr de vouloir supprimer cet aliment ?</p></div>
+    <div><p>Etes-vous sûr de vouloir supprimer cet aliment ?</p></div>
 
-  <div>
-    <button type="submit" id="btnSupprimer" (click)="deleteAliment(aliment)">
-      Oui, supprimer
-    </button>
-    <button class="btnAnnuler" [routerLink]="['/aliment']">Non, annuler</button>
+    <div>
+      <button type="submit" id="btnSupprimer" (click)="deleteAliment(aliment)">
+        Oui, supprimer
+      </button>
+      <button class="btnAnnuler" [routerLink]="['/aliment']">
+        Non, annuler
+      </button>
+    </div>
   </div>
-</div>
+<!-- </div> -->
 <app-footer></app-footer>
