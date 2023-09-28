@@ -41,7 +41,7 @@
                 [class.input-error]="password.invalid && isFormSubmit" placeholder="Mot de passe">
             <div *ngIf="password.invalid && isFormSubmit" class="alert">
                 <div *ngIf="password.errors?.['required']">Le mot de passe est obligatoire.</div>
-                <div *ngIf="password.errors?.['pattern']">Doit contenir au moins 12 caractères, 1 majuscule, 1 chiffre et 1 symbole.</div>
+                <div class="errorMdp" *ngIf="password.errors?.['pattern']">Au moins 12 caractères, 1 majuscule, 1 chiffre et 1 symbole.</div>
             </div>
         </div>
 
@@ -50,7 +50,7 @@
                 [(ngModel)]="utilisateur.mot_de_passe_confirme" name="mot_de_passe_confirme" #password="ngModel"
                 [class.input-error]="utilisateur.mot_de_passe !== utilisateur.mot_de_passe_confirme && isFormSubmit " placeholder="Confirmez votre mot de passe">
             <div *ngIf="utilisateur.mot_de_passe !== utilisateur.mot_de_passe_confirme && isFormSubmit" class="alert">
-                Les mots de passe ne correspondent pas.
+                <div class="errorConfirme">Les mots de passe ne correspondent pas.</div>
             </div>
         </div>
 
