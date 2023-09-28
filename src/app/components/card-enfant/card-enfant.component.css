@@ -29,3 +29,9 @@ button {
     height: 11.25rem;
     margin: 1rem;
 }
+
+@media (max-width: 48rem) {
+    .card-mobile {
+            width: 22rem;           
+        }
+}

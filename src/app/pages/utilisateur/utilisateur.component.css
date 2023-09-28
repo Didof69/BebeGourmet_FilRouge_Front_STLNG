@@ -26,3 +26,9 @@
     background-repeat: repeat;
     background-size: contain;
 }
+
+@media (max-width: 48rem) {
+    .card-mobile {
+        width: 24rem;
+    }
+}
