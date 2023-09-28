@@ -66,13 +66,25 @@ h2 {
   margin-bottom: 0.5rem;
 }
 /* ajout de la class du bouton retour */
+.btnModele {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #225777;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .btnModeleRed {
   font-size: 1rem;
   color: #ffffff;
   background-color: #982312;
   border: none;
   cursor: pointer;
-  border-radius: 1.88rem;
+  border-radius: 30px;
   width: 12rem;
   height: 2.5rem;
   margin-bottom: 0.5rem;
