@@ -1,8 +1,10 @@
 .mainContainer {
     align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    padding-top: 3.5rem;
+    height: 80vh;
+    text-align: center;
 }
 
 .card {
@@ -14,7 +16,6 @@
     box-shadow: 0 0 0.94rem -0.25rem #225777;
     background-size: cover;
     background-image: url(../../../assets/CrabeBleu.jpg);
-    opacity: 25%;
 }
 
 h2 {
