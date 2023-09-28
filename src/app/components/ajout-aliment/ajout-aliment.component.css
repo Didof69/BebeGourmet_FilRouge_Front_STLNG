@@ -16,7 +16,7 @@ h1 {
 .letterSpacing {
     display: flex;
     justify-content: center;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1px;
 }
 
 .lowSize {
@@ -31,13 +31,13 @@ h1 {
 
 .ng-select.custom ::ng-deep .ng-select-container {
     background-color: rgba(34, 87, 119, 0.2);
-    min-height: 0px;
-    border-radius: 28px;
+    min-height: 0rem;
+    border-radius: 1.75rem;
     height: 2.5rem;
     width: 100%;
     margin-bottom: 0.6rem;
     display: flex;
-    line-height: 38px;
+    line-height: 2.375rem;
     padding-left: 2.5rem;
 }
 
@@ -48,7 +48,7 @@ h1 {
 .inputStyle {
     background-color: rgba(34, 87, 119, 0.2);
     min-height: 0px;
-    border-radius: 28px;
+    border-radius: 1.75rem;
     height: 2.5rem;
     width: 100%;
     margin-bottom: 0.6rem;
@@ -64,7 +64,7 @@ h1 {
     background-color: #225777;
     border: none;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 1.875rem;
     width: 12rem;
     height: 2.5rem;
     margin-bottom: 1rem;
@@ -76,7 +76,7 @@ h1 {
     background-color: #982312;
     border: none;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 1.875rem;
     width: 12rem;
     height: 2.5rem;
     margin-bottom: 1rem;

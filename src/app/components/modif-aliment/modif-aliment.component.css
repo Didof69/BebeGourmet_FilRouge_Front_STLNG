@@ -1,4 +1,9 @@
 .container {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
     margin-top: 3rem;
     width: 40vw;
 }
@@ -79,4 +84,13 @@ h1 {
 
 .custom-input::placeholder {
     text-align: center;
+}
+
+@media only screen and (max-width: 48rem) {
+    .container {
+    width:auto;
+}
+    p {
+        margin-bottom: 0.5rem;
+    }
 }
