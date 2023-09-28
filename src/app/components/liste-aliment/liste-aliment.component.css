@@ -156,12 +156,12 @@ thead th {
     }
 
     td {
-
         position: relative;
         padding-left: 50%;
         white-space: normal;
         text-align: left;
         width: auto;
+        line-height: 1rem;
     }
 
     td:before {

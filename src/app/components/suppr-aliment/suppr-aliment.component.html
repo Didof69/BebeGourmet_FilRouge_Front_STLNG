@@ -1,17 +1,17 @@
 <app-navbar></app-navbar>
 <div class="mainContainer" *ngIf="aliment">
+  <div class="card">
+    <div class=""></div>
+  </div>
+
   <div>
-    <p>{{ aliment.libelle }} :</p>
+    <h2>{{ aliment.libelle }}</h2>
   </div>
 
   <div><p>Etes-vous sûr de vouloir supprimer cet aliment ?</p></div>
 
   <div>
-    <button
-      type="submit"
-      id="btnSupprimer"
-      (click)="deleteAliment(aliment)"
-    >
+    <button type="submit" id="btnSupprimer" (click)="deleteAliment(aliment)">
       Oui, supprimer
     </button>
     <button class="btnAnnuler" [routerLink]="['/aliment']">Non, annuler</button>
