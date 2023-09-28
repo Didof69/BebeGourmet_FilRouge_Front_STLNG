@@ -33,7 +33,7 @@ h1 {
     background-color: rgba(34, 87, 119, 0.2);
     min-height: 0rem;
     border-radius: 1.75rem;
-    height: 2.5rem;
+    height: 3.13rem;
     width: 100%;
     margin-bottom: 0.6rem;
     display: flex;
@@ -47,9 +47,9 @@ h1 {
 
 .inputStyle {
     background-color: rgba(34, 87, 119, 0.2);
-    min-height: 0px;
+    min-height: 0;
     border-radius: 1.75rem;
-    height: 2.5rem;
+    height: 3.13rem;
     width: 100%;
     margin-bottom: 0.6rem;
     padding-left: 3rem;
@@ -90,4 +90,11 @@ h1 {
     p {
         margin-bottom: 0.5rem;
     }
+    .ng-select.custom ::ng-deep .ng-select-container {
+        height: 2.5rem;
+    }
+    .inputStyle {
+        height: 2.5rem;
+    }
+
 }
