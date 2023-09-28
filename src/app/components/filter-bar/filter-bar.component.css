@@ -1,6 +1,6 @@
 .filterbar {
     position: absolute;
-    top: 10rem;
+    top: 8em;
     left: 0;
     width: 0;
     overflow: hidden;
@@ -15,7 +15,7 @@
 
 #btnFilterBarUtilisateur {
     position: absolute;
-    top: 10rem;
+    top: 12rem;
     left: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -68,7 +68,14 @@ label {
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
     #btnFilterBarEnfant {
-    top: 16rem;
-}
-}
+        top: 16rem;
+    }
 
+    #btnFilterBarUtilisateur{
+        top :10rem;
+    }
+
+    .filterbar {
+        top:4rem;
+    }
+}

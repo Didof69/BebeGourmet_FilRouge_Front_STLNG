@@ -42,7 +42,6 @@ export class ModifEnfantComponent {
     const infoChecked = JSON.parse(target.value);
 
     if (target.checked) {
-
       if (this.checkedRestrictions.length === this.restriction.length) {
         this.checkedRestrictions = [];
         this.checkedRestrictions.push(infoChecked);
@@ -73,5 +72,11 @@ export class ModifEnfantComponent {
       },
       error: (error) => {},
     });
+  }
+
+  majusculeFirst() {
+    const prenom =
+      this.enfant.prenom.charAt(0).toUpperCase() + this.enfant.prenom.slice(1);
+    return prenom;
   }
 }

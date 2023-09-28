@@ -107,18 +107,17 @@ thead th {
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
     .container-principal {
-        padding-bottom: 5rem;
+        padding-bottom: 2rem;
     }
 
     .container-aliments {
         margin-left: 3rem;
         width: 95%;
-        height: 58vh;
+        height: 60vh;
     }
 
     .container-title, .tst {
         width: 100%;
-        
     }
 
     .container-title h2 {
@@ -128,6 +127,14 @@ thead th {
         /* Ajuster l'espacement entre les lignes */
         white-space: normal;
         /* Permettre le passage à la ligne */
+    }
+
+    #listeEnfant {
+        padding-left: 2.5rem;
+    }
+
+    .tst {
+        height: 2.5rem;
     }
 
     #btnAjouter {
