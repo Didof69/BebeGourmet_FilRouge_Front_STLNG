@@ -46,3 +46,22 @@ button {
 .padding {
     padding-top: 8rem;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 48rem) {
+    .logo {
+        margin-top: 3rem;
+        width: 14rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.04rem;
+    }
+
+    button {
+        width: 12rem;
+        height: 3rem;
+    }
+
+}

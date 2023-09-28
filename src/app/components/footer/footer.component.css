@@ -20,10 +20,10 @@ li {
 }
 
 /* Media Queries */
-@media (max-width: 760px) {
+@media only screen and (max-width: 48rem) {
     .droitReserve {
-    width: 40%;
-    text-align: center;
-    font-size: 0.8rem;
-}
+        width: 40%;
+        text-align: center;
+        font-size: 0.8rem;
+    }
 }
