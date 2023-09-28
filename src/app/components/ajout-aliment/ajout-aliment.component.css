@@ -1,4 +1,9 @@
 .container {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
     margin-top: 3rem;
     width: 40vw;
 }
@@ -28,9 +33,9 @@ h1 {
     background-color: rgba(34, 87, 119, 0.2);
     min-height: 0px;
     border-radius: 28px;
-    height: 50px;
+    height: 2.5rem;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 0.6rem;
     display: flex;
     line-height: 38px;
     padding-left: 2.5rem;
@@ -44,9 +49,9 @@ h1 {
     background-color: rgba(34, 87, 119, 0.2);
     min-height: 0px;
     border-radius: 28px;
-    height: 50px;
+    height: 2.5rem;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 0.6rem;
     padding-left: 3rem;
     font-size: medium;
 }
@@ -62,7 +67,7 @@ h1 {
     border-radius: 30px;
     width: 12rem;
     height: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .btnModeleRed {
@@ -74,6 +79,15 @@ h1 {
     border-radius: 30px;
     width: 12rem;
     height: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     margin-left: 2rem;
+}
+
+@media only screen and (max-width: 48rem) {
+    .container {
+    width:auto;
+}
+    p {
+        margin-bottom: 0.5rem;
+    }
 }

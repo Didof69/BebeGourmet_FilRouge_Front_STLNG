@@ -15,7 +15,7 @@ ajout des btn + route
           Voulez vous vraiment ajouter cet aliment ?
         </h1>
         <p *ngIf="hidden" class="letterSpacing">
-          Merci d’enregistrer les informations suivantes :
+          {{ isLargeScreen ? texteLargeEcran : texteEcranEtroit }}
         </p>
 
         <!-- Champs "Nom" -->
