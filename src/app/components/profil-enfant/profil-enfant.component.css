@@ -1,89 +1,97 @@
 .profil-banner {
-    background-color: #225777;
-    color: white;
-    height: 12.5rem;
+  background-color: #225777;
+  color: white;
+  height: 12.5rem;
 }
 
 .zoneProfil {
-    align-self: flex-end;
-    margin: 1.25rem;
+  align-self: flex-end;
+  margin: 1.25rem;
 }
 
 .zoneVierge {
-    width: 14rem;
+  width: 14rem;
 }
 
 p {
-    margin: 0.31rem;
-    line-height: normal;
+  margin: 0.31rem;
+  line-height: normal;
 }
 
 h1 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .btnModifier {
-    background-color: #BFDAD8;
-    margin: 0;
-    border-radius: 2rem;
-    width: 8rem;
-    height: 1.75rem;
-    color: #303030;
-    border: none;
-    font-size: 1rem;
-    margin-right: 1rem;
+  background-color: #bfdad8;
+  margin: 0;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 1.75rem;
+  color: #303030;
+  border: none;
+  font-size: 1rem;
+  margin-right: 1rem;
 }
 
 .btnSupprimer {
-    margin: 0;
-    border-radius: 2rem;
-    width: 8rem;
-    height: 1.75rem;
-    border: none;
-    font-size: 1rem;
-    color: #FFFFFF;
-    background-color: #982312;
+  margin: 0;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 1.75rem;
+  border: none;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #982312;
 }
 
-
 .btnModifier:hover {
-    background-color: #9CB3B1;
+  background-color: #9cb3b1;
 }
 
 .btnSupprimer:hover {
-    background-color: #491108;
+  background-color: #491108;
 }
 
-
 .zoneAvatar {
-    text-align: center;
+  text-align: center;
 }
 
 .avatar-circle {
-    width: 6.25rem;
-    height: 6.25rem;
-    border-radius: 50%;
-    border: solid;
-    background-color: #982312;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    z-index: 2;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  border: solid;
+  background-color: #982312;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  z-index: 2;
 }
 
 #avatar {
-    width: 4.8rem;
+  width: 4.8rem;
 }
 
 .svg {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .tst {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.btnModeleRed {
+  border-radius: 2rem;
+  width: 100%;
+  height: 1.75rem;
+  border: none;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #982312;
 }

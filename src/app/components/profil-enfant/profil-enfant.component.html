@@ -1,7 +1,9 @@
 <app-navbar></app-navbar>
-<img class="svg" src="assets/shape.png" alt="svg">
+<img class="svg" src="assets/shape.png" alt="svg" />
 <div class="container-fluid p-0">
-  <div class="d-flex justify-content-between align-items-center profil-banner shadow ali">
+  <div
+    class="d-flex justify-content-between align-items-center profil-banner shadow ali"
+  >
     <div class="zoneVierge">
       <p></p>
     </div>
@@ -10,29 +12,39 @@
       <div class="avatar-circle">
         <img id="avatar" src="../../../assets/Baby-blanc.png" alt="" />
       </div>
-      <h1>{{majusculeFirst()}}</h1>
+      <h1>{{ majusculeFirst() }}</h1>
       <div>
-      <button class="btnModifier" (click)="modifierEnfant()">Modifier</button>
-      <button class="btnSupprimer" [routerLink]="['/profil-utilisateur/child/supprimer/', enfant.id]">Supprimer</button>
+        <button class="btnModifier" (click)="modifierEnfant()">Modifier</button>
+        <button
+          class="btnSupprimer"
+          [routerLink]="['/profil-utilisateur/child/supprimer/', enfant.id]"
+        >
+          Supprimer
+        </button>
       </div>
-    
     </div>
 
     <div>
       <div class="zoneProfil">
-        <p>Né(e) le : {{(enfant.date_naissance | date:'dd/MM/yyyy')}}</p>
-        <p>Âge : {{ageEnfant}} mois</p>
+        <p>Né(e) le : {{ enfant.date_naissance | date : "dd/MM/yyyy" }}</p>
+        <p>Âge : {{ ageEnfant }} mois</p>
         <p>Restriction(s) :</p>
-        <p>{{tabRestrictions}}</p>
+        <p>{{ tabRestrictions }}</p>
+        <button
+          [routerLink]="'/profil-utilisateur'"
+          type="button"
+          class="btn-block btnModeleRed"
+        >
+          Retour
+        </button>
       </div>
     </div>
   </div>
 </div>
 
 <div class="d-flex">
-
   <app-filter-bar
-  [enfant]="enfant"
+    [enfant]="enfant"
     [tabCategories]="tabCategories"
     [tabRestrictions]="tabRestrictions"
     [tabSaisons]="tabSaisons"
@@ -40,11 +52,10 @@
     (newSaisonEvent)="onFiltreSaisons($event)"
   ></app-filter-bar>
 
-  <app-liste-aliment 
+  <app-liste-aliment
     class="tst"
     [aliments]="alimentsToDisplayFilter"
     [enfant]="enfant"
   ></app-liste-aliment>
-  
 </div>
 <app-footer></app-footer>
