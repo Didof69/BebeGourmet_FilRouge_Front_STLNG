@@ -32,6 +32,13 @@ input {
     font-size: 0.8rem;
 }
 
+.emailKO {
+    color: #982312;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+}
+
 .btn {
     font-size: 1rem;
     color: #FFFFFF;
@@ -51,36 +58,21 @@ input {
 /*Media Queries */
 @media only screen and (max-width: 48rem) {
     input {
-    align-items: center;
-    background-color: rgba(34, 87, 119, 0.2);
-    border: none;
-    cursor: pointer;
-    border-radius: 1.88rem;
-    margin-top: 1rem;
-    padding: 0.7rem;
-    padding-left: 1.3rem;
-    width: 68vw;
-}
+        align-items: center;
+        padding-left: 1.3rem;
+        width: 68vw;
+    }
 
-.alert {
-    color: #982312;
-    margin-bottom: -2rem;
-    font-size: 0.69rem;
-}
+    .alert {
+        font-size: 0.69rem;
+    }
 
-.errorMdp, .errorConfirme {
-    width: 55vw;
-}
 
-.btn {
-    font-size: 1rem;
-    color: #FFFFFF;
-    background-color: #225777;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.88rem;
-    margin-top: 2.1rem;
-    padding: 0.7rem;
-    width: 68vw;
-}
+    .errorMdp, .errorConfirme {
+        width: 55vw;
+    }
+
+    .btn {
+        width: 68vw;
+    }
 }
