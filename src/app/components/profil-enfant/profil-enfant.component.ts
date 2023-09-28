@@ -96,7 +96,7 @@ export class ProfilEnfantComponent {
 
     let mois = (today.getFullYear() - dateAnniv.getFullYear()) * 12;
     //ex: 2023-2022 = 1 => 1*12 = 12 mois
-    mois += today.getMonth() - dateAnniv.getMonth();
+    mois += today.getMonth() - dateAnniv.getMonth() + 1;
     //ajoute cette difference de mois au total déjà calculé pour les années
     //les mois sont indexé à partir de 0, soit ex : septembre = 8
 
