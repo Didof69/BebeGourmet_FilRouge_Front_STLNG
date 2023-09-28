@@ -1,8 +1,10 @@
 .mainContainer {
     align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    padding-top: 3.5rem;
+    height: 80vh;
+    text-align: center;
 }
 
 .card {
@@ -30,7 +32,6 @@ h2 {
     border-radius: 1.88rem;
     width: 12rem;
     height: 2.5rem;
-    margin-top: 1.5rem;
 }
 
 .btnAnnuler {
