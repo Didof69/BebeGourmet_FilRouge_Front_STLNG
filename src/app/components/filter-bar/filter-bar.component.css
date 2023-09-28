@@ -1,20 +1,21 @@
 .filterbar {
     position: absolute;
-    width: 0; 
+    top: 10rem;
     left: 0;
-    top: 22rem;
+    width: 0;
     overflow: hidden;
     transition: width 0.3s;
+    z-index: 2;
 }
 
 .filterbar.open {
-    z-index: 2;
     width: 14rem;
+    left: 2rem;
 }
 
 #btnFilterBarUtilisateur {
-    position: relative;
-    top: 22rem;
+    position: absolute;
+    top: 10rem;
     left: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -31,7 +32,7 @@
 
 #btnFilterBarEnfant {
     position: absolute;
-    top: 22rem;
+    top: 20rem;
     left: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -63,3 +64,11 @@ label {
 .form-check {
     margin-left: 1.3rem;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 48rem) {
+    #btnFilterBarEnfant {
+    top: 16rem;
+}
+}
+

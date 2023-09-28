@@ -106,9 +106,14 @@ thead th {
 
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
+    .container-principal {
+        padding-bottom: 5rem;
+    }
 
     .container-aliments {
-        width: 100%;
+        margin-left: 3rem;
+        width: 95%;
+        height: 58vh;
     }
 
     .container-title, .tst {
@@ -151,8 +156,8 @@ thead th {
 
     thead tr {
         position: absolute;
-        top: -9999px;
-        left: -9999px;
+        top: -624.94rem;
+        left: -624.94rem;
     }
 
     td {
@@ -169,7 +174,7 @@ thead th {
         top: 6px;
         left: 6px;
         width: 45%;
-        padding-right: 10px;
+        padding-right: 0.63rem;
         font-weight: bold;
         white-space: nowrap;
         text-align: left;
