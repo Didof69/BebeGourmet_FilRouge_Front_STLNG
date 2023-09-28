@@ -1,19 +1,21 @@
 .filterbar {
+    position: absolute;
+    top: 10rem;
+    left: 0;
     width: 0;
     overflow: hidden;
-    transition: width 0.5s;
-    position: relative;
-    top: 5rem;
-    left: 0;
+    transition: width 0.3s;
+    z-index: 2;
 }
 
 .filterbar.open {
     width: 14rem;
+    left: 2rem;
 }
 
 #btnFilterBarUtilisateur {
-    position: relative;
-    top: 5rem;
+    position: absolute;
+    top: 10rem;
     left: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -25,11 +27,12 @@
     border-radius: 0 50% 50% 0;
     cursor: pointer;
     font-size: 1rem;
+    z-index: 2;
 }
 
 #btnFilterBarEnfant {
-    position: relative;
-    top: 5rem;
+    position: absolute;
+    top: 20rem;
     left: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -41,6 +44,7 @@
     border-radius: 0 50% 50% 0;
     cursor: pointer;
     font-size: 1rem;
+    z-index: 2;
 }
 
 .accordion-body {
@@ -60,3 +64,11 @@ label {
 .form-check {
     margin-left: 1.3rem;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 48rem) {
+    #btnFilterBarEnfant {
+    top: 16rem;
+}
+}
+
