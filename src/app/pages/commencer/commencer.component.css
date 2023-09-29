@@ -1,67 +1,73 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .top-svg {
-    width: 20vh;
-    display: flex;
-    justify-content: left;
+  width: 20vh;
+  display: flex;
+  justify-content: left;
 }
 
 .logo {
-    margin-top: 2rem;
-    width: 20rem;
-    display: flex;
-    justify-content: center;
+  margin-top: 2rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    letter-spacing: 0.06rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
-    vertical-align: center;
+  vertical-align: center;
 }
 
 button {
-    margin-top: 2rem;
-    border-radius: 2rem;
-    width: 15rem;
-    height: 3rem;
-    background-color: #225777;
-    color: white;
-    border: none;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  width: 15rem;
+  height: 3rem;
+  background-color: #225777;
+  color: white;
+  border: none;
 }
 
 .padding {
-    padding-top: 8rem;
+  padding-top: 8rem;
 }
+
+/* hover + shadow */
+button:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
+
 
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
-    .logo {
-        margin-top: 3rem;
-        width: 14rem;
-    }
+  .logo {
+    margin-top: 3rem;
+    width: 14rem;
+  }
 
-    h1 {
-        font-size: 1.5rem;
-        letter-spacing: 0.04rem;
-    }
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.04rem;
+  }
 
-    button {
-        width: 12rem;
-        height: 3rem;
-    }
-
+  button {
+    width: 12rem;
+    height: 3rem;
+  }
 }

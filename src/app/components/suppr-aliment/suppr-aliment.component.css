@@ -19,42 +19,52 @@
 }
 
 h2 {
-    color: #982312;
-    margin-top: 1.5rem;
+  color: #982312;
+  margin-top: 1.5rem;
 }
 
-
 #btnSupprimer {
-    font-size: 1rem;
-    color: #FFFFFF;
-    background-color: #225777;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.88rem;
-    width: 12rem;
-    height: 2.5rem;
-    margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #225777;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.88rem;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .btnAnnuler {
-    font-size: 1rem;
-    color: #FFFFFF;
-    background-color: #982312;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-    width: 12rem;
-    height: 2.5rem;
-    margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #982312;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 button {
-    margin: 0 4.38rem;
+  margin: 0 4.38rem;
 }
 
 p {
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    padding: 1rem;
-    font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+/* hover + shadow */
+#btnSupprimer:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
+/* hover + shadow */
+.btnAnnuler:hover {
+  background-color: #d13017;
+  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
 }

@@ -4,6 +4,10 @@
 
 }
 
+.navbar {
+  width: 100%;
+}
+
 nav {
     font-size: 1.25trm;
     border-bottom: rgba(0, 0, 0, 0.2) solid;
