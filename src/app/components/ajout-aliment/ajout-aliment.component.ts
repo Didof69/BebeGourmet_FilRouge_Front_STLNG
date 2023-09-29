@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Aliment } from 'src/app/models/aliment';
 import { Categorie } from 'src/app/models/categorie';
@@ -29,6 +29,9 @@ export class AjoutAlimentComponent implements OnInit {
   hidden1: boolean = false;
   // blockSelect pour verrouiller les inputs
   blockSelect: boolean = false;
+  texteLargeEcran: string = "Merci d’enregistrer les informations suivantes:";
+  texteEcranEtroit: string = "Merci d’enregistrer ces informations:";
+  isLargeScreen: boolean = true;
 
   constructor(
     private alimentService: AlimentService,
@@ -54,6 +57,8 @@ export class AjoutAlimentComponent implements OnInit {
     this.categorieService.getCategories().subscribe((data) => {
       this.categorie = data;
     });
+    this.checkScreenSize();
+
   }
 
   createAliment(
@@ -95,5 +100,16 @@ export class AjoutAlimentComponent implements OnInit {
       this.hidden1 = !this.hidden1;
       this.blockSelect = !this.blockSelect;
     }
+  }
+
+  // Utilisez HostListener pour détecter les changements de taille d'écran
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  // Fonction pour vérifier la taille de l'écran
+  checkScreenSize() {
+    this.isLargeScreen = window.innerWidth >= 768; // Définissez la largeur minimale de l'écran pour considérer comme "grand écran"
   }
 }

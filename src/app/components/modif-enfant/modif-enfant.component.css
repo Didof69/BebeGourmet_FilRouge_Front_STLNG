@@ -53,6 +53,7 @@ h2 {
   width: 15rem;
   margin-top: 0.3rem;
 }
+
 /* supp du width  et margin-top, ajout margin-bot*/
 .btnModele {
   font-size: 1rem;
@@ -65,6 +66,7 @@ h2 {
   height: 2.5rem;
   margin-bottom: 0.5rem;
 }
+
 /* ajout de la class du bouton retour */
 .btnModele {
   font-size: 1rem;
@@ -99,6 +101,27 @@ label {
   cursor: pointer;
 }
 
+.btnModele:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
+/* hover + shadow */
+.btnModeleRed:hover {
+  background-color: #d13017;
+  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
+}
+
+.btnModele:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
+/* hover + shadow */
+.btnModeleRed:hover {
+  background-color: #d13017;
+  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 48rem) {
   .style-input {
     width: 68vw;

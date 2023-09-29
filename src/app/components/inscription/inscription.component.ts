@@ -20,7 +20,7 @@ export class InscriptionComponent {
   };
 
   confirmMdpError = false;
-
+  inscriptionOK = true;
   isFormSubmit = false;
 
   constructor(
@@ -44,6 +44,8 @@ export class InscriptionComponent {
             this.router.navigate(['/profil-utilisateur']);
           },
           error: (error) => {
+            this.inscriptionOK = false;
+            console.log(this.inscriptionOK);
           },
         });
     }
