@@ -103,7 +103,6 @@ label {
   box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
 }
 
-<<<<<<< HEAD
 .marginBouton {
     margin: 1.5rem;
   }
@@ -137,7 +136,7 @@ label {
   }
 
 }
-=======
+
 @media only screen and (max-width: 48rem) {
   .mainContainer{
     width: auto;
