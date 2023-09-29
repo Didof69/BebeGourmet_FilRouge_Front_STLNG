@@ -9,49 +9,49 @@
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .letterSpacing {
     display: flex;
     justify-content: center;
-    letter-spacing: 0.1px;
+    letter-spacing: 1.5px;
 }
 
 .lowSize {
-    font-size: small;
+  font-size: small;
 }
 
 .svg {
-    height: 10em;
-    display: flex;
-    justify-content: left;
+  height: 10em;
+  display: flex;
+  justify-content: left;
 }
 
 .ng-select.custom ::ng-deep .ng-select-container {
     background-color: rgba(34, 87, 119, 0.2);
-    min-height: 0rem;
-    border-radius: 1.75rem;
-    height: 3.13rem;
+    min-height: 0px;
+    border-radius: 28px;
+    height: 50px;
     width: 100%;
-    margin-bottom: 0.6rem;
+    margin-bottom: 15px;
     display: flex;
-    line-height: 2.375rem;
+    line-height: 38px;
     padding-left: 2.5rem;
 }
 
 ::placeholder {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .inputStyle {
     background-color: rgba(34, 87, 119, 0.2);
-    min-height: 0;
-    border-radius: 1.75rem;
-    height: 3.13rem;
+    min-height: 0px;
+    border-radius: 28px;
+    height: 50px;
     width: 100%;
-    margin-bottom: 0.6rem;
+    margin-bottom: 15px;
     padding-left: 3rem;
     font-size: medium;
 }
@@ -64,10 +64,10 @@ h1 {
     background-color: #225777;
     border: none;
     cursor: pointer;
-    border-radius: 1.875rem;
+    border-radius: 30px;
     width: 12rem;
     height: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .btnModeleRed {
@@ -76,25 +76,20 @@ h1 {
     background-color: #982312;
     border: none;
     cursor: pointer;
-    border-radius: 1.875rem;
+    border-radius: 30px;
     width: 12rem;
     height: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     margin-left: 2rem;
 }
 
-@media only screen and (max-width: 48rem) {
-    .container {
-    width:auto;
+/* hover + shadow */
+.btnModele:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
 }
-    p {
-        margin-bottom: 0.5rem;
-    }
-    .ng-select.custom ::ng-deep .ng-select-container {
-        height: 2.5rem;
-    }
-    .inputStyle {
-        height: 2.5rem;
-    }
-
+/* hover + shadow */
+.btnModeleRed:hover {
+  background-color: #d13017;
+  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
 }

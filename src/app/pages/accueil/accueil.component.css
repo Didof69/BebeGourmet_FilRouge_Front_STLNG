@@ -1,37 +1,42 @@
-    .carousel-image {
-        height: 80vh;
-        object-fit: cover;
-    }
+.carousel-image {
+  height: 80vh;
+  object-fit: cover;
+}
 
-    .logo {
-        width: 15rem;
-        margin-bottom: 1.5rem;
-        filter: drop-shadow(5px 5px 5px #303030);
-    }
+.logo {
+  width: 15rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(5px 5px 5px #303030);
+}
 
-    .zoneTexte {
-        background-color: rgba(246, 241, 235, 0.9);
-        color: #303030;
-        border-radius: 1.25rem;
-        padding: 2rem;
-    }
+.zoneTexte {
+  background-color: rgba(246, 241, 235, 0.9);
+  color: #303030;
+  border-radius: 1.25rem;
+  padding: 2rem;
+}
 
-    h1, h2 {
-        font-size: 1.5rem;
-        font-weight: bolder;
-    }
+h1,
+h2 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
 
-    .btn {
-        font-size: 1rem;
-        color: #ffffff;
-        background-color: #225777;
-        border: none;
-        cursor: pointer;
-        border-radius: 1.88rem;
-        width: 12rem;
-        height: 2.5rem;
-        margin-bottom: 0.5rem;
-    }
+.btn {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #225777;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.88rem;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.btn:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
 
     /* Media Queries */
     @media only screen and (max-width: 48rem) {
@@ -40,32 +45,33 @@
             object-fit: cover;
         }
 
-        .logo {
-            width: 8rem;
-            filter: drop-shadow(5px 5px 5px #303030);
-            margin: 0;
-        }
+  .logo {
+    width: 8rem;
+    filter: drop-shadow(5px 5px 5px #303030);
+    margin: 0;
+  }
 
-        .btn {
-            width: 8rem;
-        }
+  .btn {
+    width: 8rem;
+  }
 
-        .zoneTexte {
-            padding: 0.8rem;
-        }
+  .zoneTexte {
+    padding: 0.8rem;
+  }
 
-        h1, h2 {
-            font-size: 1.2rem;
-            font-weight: bolder;
-        }
+  h1,
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
 
-        h5 {
-            font-size: 1rem;
-            font-weight: bolder;
-        }
+  h5 {
+    font-size: 1rem;
+    font-weight: bolder;
+  }
 
-        p {
-            line-height: 1.2rem;
-            font-size: 0.8rem;
-        }
-    }
+  p {
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+  }
+}
