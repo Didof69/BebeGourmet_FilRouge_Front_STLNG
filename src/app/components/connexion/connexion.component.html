@@ -21,7 +21,7 @@
                 [class.input-error]="password.invalid && isFormValidate" placeholder="Mot de passe">
             <div *ngIf="password.invalid && isFormValidate" class="alert">
                 <div *ngIf="password.errors?.['required']">Le mot de passe est obligatoire.</div>
-                <div *ngIf="password.errors?.['pattern']">Doit contenir au moins 12 caractères, 1 majuscule, 1 chiffre et 1 symbole.</div>
+                <div class="errorMdp" *ngIf="password.errors?.['pattern']">Au moins 12 caractères, 1 majuscule, 1 chiffre et 1 symbole.</div>
             </div>
         </div>
 
