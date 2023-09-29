@@ -28,14 +28,13 @@
             <div class="form-group">
                 <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control shadow-sm"
                     [(ngModel)]="utilisateur.email" name="email" #email="ngModel"
-                    [class.input-error]="email.invalid && isFormSubmit" placeholder="Email">
+                    [class.input-error]="email.invalid && isFormSubmit" placeholder="Email"
+                    [class.input-error]="!inscriptionOK">
                 <div *ngIf="email.invalid && isFormSubmit" class="alert">
                     <div *ngIf="email.errors?.['required']">L'email est obligatoire.</div>
                     <div *ngIf="email.errors?.['pattern']">Veuillez entrer une adresse email valide.</div>
                 </div>                         
-                <div *ngIf="!inscriptionOK" class="emailKO">
-                     <div>Cet email est déjà utilisé.</div>
-                </div>
+                     <div *ngIf="!inscriptionOK" class="alert">Cet email est déjà utilisé.</div>
             </div>
 
         <div class="form-group">

@@ -14,6 +14,7 @@
         name="email"
         #email="ngModel"
         [class.input-error]="email.invalid && isFormValidate"
+        [class.input-error-log]="connexionKO"
         placeholder="Email"
       />
       <div *ngIf="email.invalid && isFormValidate" class="alert">
@@ -21,7 +22,9 @@
         <div *ngIf="email.errors?.['pattern']">
           Veuillez entrer une adresse email valide.
         </div>
-      </div>
+
+      </div>        
+ 
     </div>
 
     <div class="form-group">
@@ -34,6 +37,7 @@
         name="mot_de_passe"
         #password="ngModel"
         [class.input-error]="password.invalid && isFormValidate"
+        [class.input-error]="connexionKO"
         placeholder="Mot de passe"
       />
       <div *ngIf="password.invalid && isFormValidate" class="alert">
@@ -44,6 +48,7 @@
           Au moins 12 caractères, 1 majuscule, 1 chiffre et 1 symbole.
         </div>
       </div>
+      <div *ngIf="connexionKO" class="alert">Vérifiez votre email et votre mot de passe.</div>
     </div>
 
     <button type="submit" class="btn btn-primary">Se connecter</button>
