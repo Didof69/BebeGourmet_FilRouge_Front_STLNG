@@ -23,7 +23,7 @@ input {
 }
 
 .input-error {
-  border: 2px solid #982312;
+  border: 0.13rem solid #982312;
   margin-bottom: -1rem;
 }
 
@@ -80,5 +80,9 @@ input {
 
   .btn {
     width: 68vw;
+  }
+
+  .btn:hover {
+    background-color: #225777;
   }
 }

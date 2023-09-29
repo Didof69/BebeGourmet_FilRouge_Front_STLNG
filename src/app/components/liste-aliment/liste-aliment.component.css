@@ -184,8 +184,8 @@ thead th {
 
     td:before {
         position: absolute;
-        top: 6px;
-        left: 6px;
+        top: 0.38rem;
+        left:0.38rem;
         width: 45%;
         padding-right: 0.63rem;
         font-weight: bold;

@@ -28,7 +28,7 @@ h2 {
 
 .style-input {
   background-color: rgba(34, 87, 119, 0.2);
-  border-radius: 30px;
+  border-radius: 1.88rem;
   border: none;
   cursor: pointer;
   margin-top: 0.5rem;
@@ -45,7 +45,7 @@ h2 {
 
 .box {
   background-color: rgba(34, 87, 119, 0.2);
-  border-radius: 30px;
+  border-radius: 1.88rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -101,6 +101,40 @@ label {
 .btnModeleRed:hover {
   background-color: #d13017;
   box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
+}
+
+.marginBouton {
+    margin: 1.5rem;
+  }
+
+/* Media Queries */
+@media only screen and (max-width: 48rem) {
+  .style-input {
+    width: 90vw;
+  }
+
+  h1{
+    margin-bottom: 1.4rem;
+  }
+
+  .marginBouton {
+    margin: 0;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    width : 37.5vw;
+  }
+
+  .box {
+    display: block;
+    overflow: auto;
+    width: auto;
+    height: 8rem;
+    border-radius: 1.88rem;
+    padding: 0.40rem 0.75rem 0.75rem 2.5rem;
+  }
+
 }
 
 @media only screen and (max-width: 48rem) {
