@@ -77,7 +77,11 @@ input {
     width: 55vw;
   }
 
-.btn {
+  .btn {
     width: 68vw;
+  }
+
+  .btn:hover {
+    background-color: #225777;
   }
 }

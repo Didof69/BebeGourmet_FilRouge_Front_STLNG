@@ -1,5 +1,5 @@
 .mainContainer {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,6 +103,7 @@ label {
   box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
 }
 
+<<<<<<< HEAD
 .marginBouton {
     margin: 1.5rem;
   }
@@ -136,3 +137,32 @@ label {
   }
 
 }
+=======
+@media only screen and (max-width: 48rem) {
+  .mainContainer{
+    width: auto;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  .ng-select.custom ::ng-deep .ng-select-container {
+    height: 2.5rem;
+  }
+
+  .style-input {
+    height: 2.5rem;
+    width: auto;
+  }
+  .btnModele{
+    margin-bottom: 0rem;
+  }
+  .btnModeleRed{
+    margin-bottom: 0rem;
+  }
+  .box {
+    width: auto;
+  }
+}
+>>>>>>> origin/guillaume
