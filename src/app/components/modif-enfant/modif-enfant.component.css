@@ -100,6 +100,10 @@ label {
   box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
 }
 
+.marginBouton {
+  margin: 1.5rem;
+}
+
 
 /* MEDIA QUERIES */
 @media (max-width: 48rem) {
@@ -112,8 +116,8 @@ label {
   }
 
   .marginBouton {
-    margin: 0;
-    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
   }
 
   h1 {
@@ -129,8 +133,9 @@ label {
   .box {
     display: block;
     overflow: auto;
-    width: auto;
+    width: 90vw;
     height: 8rem;
+    margin: 0.8rem;
     border-radius: 1.88rem;
     padding: 0.40rem 0.75rem 0.75rem 2.5rem;
   
