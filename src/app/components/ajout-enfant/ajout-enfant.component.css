@@ -28,7 +28,7 @@ h2 {
 
 .style-input {
   background-color: rgba(34, 87, 119, 0.2);
-  border-radius: 30px;
+  border-radius: 1.88rem;
   border: none;
   cursor: pointer;
   margin-top: 0.5rem;
@@ -45,7 +45,7 @@ h2 {
 
 .box {
   background-color: rgba(34, 87, 119, 0.2);
-  border-radius: 30px;
+  border-radius: 1.88rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

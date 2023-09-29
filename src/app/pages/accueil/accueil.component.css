@@ -6,7 +6,7 @@
 .logo {
   width: 15rem;
   margin-bottom: 1.5rem;
-  filter: drop-shadow(5px 5px 5px #303030);
+  filter: drop-shadow(0.31rem 0.31rem 0.31rem #303030);
 }
 
 .zoneTexte {
@@ -47,7 +47,7 @@ h2 {
 
   .logo {
     width: 8rem;
-    filter: drop-shadow(5px 5px 5px #303030);
+    filter: drop-shadow(0.31rem 0.31rem 0.31rem #303030);
     margin: 0;
   }
 

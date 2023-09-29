@@ -21,12 +21,12 @@ input {
 }
 
 .input-error {
-  border: 2px solid #982312;
+  border: 0.13rem solid #982312;
   margin-bottom: -1rem;
 }
 
 .input-error-log {
-  border: 2px solid #982312;
+  border: 0.13rem solid #982312;
 }
 
 .alert {
