@@ -21,6 +21,7 @@ h1 {
 
 .lowSize {
   font-size: small;
+  margin-left: 0.5rem;
 }
 
 .svg {
