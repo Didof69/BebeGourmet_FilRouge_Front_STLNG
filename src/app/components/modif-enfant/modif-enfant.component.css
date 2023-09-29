@@ -54,17 +54,6 @@ h2 {
   margin-top: 0.3rem;
 }
 /* supp du width  et margin-top, ajout margin-bot*/
-.btnModele {
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #225777;
-  border: none;
-  cursor: pointer;
-  border-radius: 1.88rem;
-  width: 12rem;
-  height: 2.5rem;
-  margin-bottom: 0.5rem;
-}
 /* ajout de la class du bouton retour */
 .btnModele {
   font-size: 1rem;
@@ -97,4 +86,14 @@ h2 {
 
 label {
   cursor: pointer;
+}
+
+.btnModele:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
+/* hover + shadow */
+.btnModeleRed:hover {
+  background-color: #d13017;
+  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
 }

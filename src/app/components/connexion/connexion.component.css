@@ -1,48 +1,89 @@
 .mainContainer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .textBienvenue {
-    text-align: center;
-    padding-top: 8rem;
+  text-align: center;
+  padding-top: 8rem;
 }
 
 input {
+  background-color: rgba(34, 87, 119, 0.2);
+  border: none;
+  cursor: pointer;
+  border-radius: 1.88rem;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  padding-left: 3rem;
+  width: 60vw;
+}
+
+.input-error {
+  border: 2px solid #982312;
+  margin-bottom: -1rem;
+}
+
+.alert {
+  color: #982312;
+  margin-bottom: -2rem;
+  font-size: 0.8rem;
+}
+
+.btn {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #225777;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.88rem;
+  margin-top: 2.1rem;
+  padding: 0.7rem;
+  width: 60vw;
+}
+
+.lienEnregistrer {
+  margin-top: 1rem;
+}
+.btn:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
+
+/*Media Queries */
+@media only screen and (max-width: 48rem) {
+  input {
+    align-items: center;
     background-color: rgba(34, 87, 119, 0.2);
     border: none;
     cursor: pointer;
     border-radius: 1.88rem;
     margin-top: 1rem;
-    padding: 0.8rem;
-    padding-left: 3rem;
-    width: 60vw;
-}
+    padding: 0.7rem;
+    padding-left: 1.3rem;
+    width: 68vw;
+  }
 
-.input-error {
-    border: 2px solid #982312;
-    margin-bottom: -1rem;
-}
-
-.alert {
+  .alert {
     color: #982312;
     margin-bottom: -2rem;
-    font-size: 0.8rem;
-}
+    font-size: 0.69rem;
+  }
 
-.btn {
+  .errorMdp {
+    width: 55vw;
+  }
+
+  .btn {
     font-size: 1rem;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: #225777;
     border: none;
     cursor: pointer;
     border-radius: 1.88rem;
     margin-top: 2.1rem;
-    padding: 0.8rem;
-    width: 60vw;
-}
-
-.lienEnregistrer {
-    margin-top: 1rem;
+    padding: 0.7rem;
+    width: 68vw;
+  }
 }

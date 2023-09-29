@@ -90,6 +90,12 @@ li {
   /*Responsive*/
 }
 
+/* hover + shadow */
+#btnAjouter:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
+
 /* Fixer l'en-tête */
 .scroller {
   overflow-y: auto;

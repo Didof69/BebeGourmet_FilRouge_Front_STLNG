@@ -92,3 +92,13 @@ h2 {
 label {
   cursor: pointer;
 }
+/* hover + shadow */
+.btnModele:hover {
+  background-color: #3b94cb;
+  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+}
+/* hover + shadow */
+.btnModeleRed:hover {
+  background-color: #d13017;
+  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
+}

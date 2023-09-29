@@ -50,7 +50,8 @@ h1 {
 }
 
 .btnSupprimer:hover {
-  background-color: #491108;
+  background-color: #d13017;
+  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
 }
 
 .zoneAvatar {
@@ -97,6 +98,10 @@ h1 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
+.btnModeleRed:hover {
+  background-color: #d13017;
+  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
+}
 /* contenair pour info enfant */
 .contenair-profil {
   height: 100%;
@@ -111,5 +116,5 @@ h1 {
   height: 100%;
   width: 100%;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
