@@ -14,7 +14,9 @@ ajout des btn + route
           Confirmer la modification ?
         </h1>
         <p *ngIf="hidden" class="letterSpacing">
-          Indiquez les éléments que vous souhaitez modifier.
+          <!-- texte suivant la taille de l'écran, voir dans le .ts -->
+          {{ isLargeScreen ? texteLargeEcran : texteEcranEtroit }}
+          
         </p>
 
         <!-- Champs "Nom" -->

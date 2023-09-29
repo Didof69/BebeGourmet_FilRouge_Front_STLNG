@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Aliment } from 'src/app/models/aliment';
 import { Categorie } from 'src/app/models/categorie';
 import { Restriction } from 'src/app/models/restriction';
@@ -29,6 +29,10 @@ export class ModifAlimentComponent implements OnInit {
   hidden1: boolean = false;
   // blockSelect pour verrouiller les inputs
   blockSelect: boolean = false;
+  texteLargeEcran: string =
+    'Indiquez les éléments que vous souhaitez modifier:';
+  texteEcranEtroit: string = 'Que souhaitez vous modifier?';
+  isLargeScreen: boolean = true;
 
   constructor(
     private alimentService: AlimentService,
@@ -63,6 +67,7 @@ export class ModifAlimentComponent implements OnInit {
     this.categorieService.getCategories().subscribe((data) => {
       this.categorie = data;
     });
+    this.checkScreenSize();
   }
 
   updateAliment(
@@ -95,9 +100,9 @@ export class ModifAlimentComponent implements OnInit {
     this.alimentService
       .updateAliment(this.aliment.id, updateAliment)
       .subscribe((data) => {
-          this.router.navigate([`/aliment`]);
+        this.router.navigate([`/aliment`]);
       });
- }
+  }
 
   // methode pour les switch de div et le verouillage
   changediv() {
@@ -110,5 +115,15 @@ export class ModifAlimentComponent implements OnInit {
       this.hidden1 = !this.hidden1;
       this.blockSelect = !this.blockSelect;
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  // Fonction pour vérifier la taille de l'écran
+  checkScreenSize() {
+    this.isLargeScreen = window.innerWidth >= 768; // Définissez la largeur minimale de l'écran pour considérer comme "grand écran"
   }
 }

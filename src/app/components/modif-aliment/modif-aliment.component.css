@@ -1,96 +1,102 @@
 .container {
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    margin-top: 3rem;
-    width: 40vw;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  margin-top: 3rem;
+  width: 40vw;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .letterSpacing {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .lowSize {
-    font-size: small;
+  font-size: small;
 }
 
 .svg {
-    height: 10rem;
-    display: flex;
-    justify-content: left;
+  height: 10rem;
+  display: flex;
+  justify-content: left;
 }
 
 ::placeholder {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .ng-select.custom ::ng-deep .ng-select-container {
-    background-color: rgba(34, 87, 119, 0.2);
-    min-height: 0;
-    border-radius: 1.75rem;
-    height: 3.13rem;
-    width: 100%;
-    margin-bottom: 0.94rem;
-    display: flex;
-    line-height: 2.38rem;
-    padding-left: 2.5rem;
+  background-color: rgba(34, 87, 119, 0.2);
+  min-height: 0;
+  border-radius: 1.75rem;
+  height: 3.13rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  line-height: 2.38rem;
+  padding-left: 2.5rem;
 }
 
 .inputStyle {
-    background-color: rgba(34, 87, 119, 0.2);
-    min-height: 0;
-    border-radius: 1.75rem;
-    height: 3.13rem;
-    width: 100%;
-    margin-bottom:  0.94rem ;
-        padding-left: 3rem;
-    font-size: medium;
+  background-color: rgba(34, 87, 119, 0.2);
+  min-height: 0;
+  border-radius: 1.75rem;
+  height: 3.13rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-left: 3rem;
+  font-size: medium;
 }
 
 /* il faut ajouter "node_modules/@ng-select/ng-select/themes/default.theme.css", dans le angular.Json // partie "style" */
 
 .btnModele {
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #225777;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.88rem;
-    width: 12rem;
-    height: 2.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #225777;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.88rem;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .btnModeleRed {
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #982312;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.88rem;
-    width: 12rem;
-    height: 2.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #982312;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.88rem;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
 }
 
 .custom-input::placeholder {
-    text-align: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 48rem) {
-    .container {
-    width:auto;
-}
-    p {
-        margin-bottom: 0.5rem;
-    }
+  .container {
+    width: auto;
+  }
+  p {
+    margin-bottom: 0.5rem;
+  }
+  .ng-select.custom ::ng-deep .ng-select-container {
+    height: 2.5rem;
+  }
+  .inputStyle {
+    height: 2.5rem;
+  }
 }
