@@ -57,15 +57,10 @@ input {
     input {
     align-items: center;
     background-color: rgba(34, 87, 119, 0.2);
-    border: none;
-    cursor: pointer;
     border-radius: 1.88rem;
-    margin-top: 1rem;
-    padding: 0.7rem;
     padding-left: 1.3rem;
     width: 68vw;
-}
-
+} 
 .alert {
     color: #982312;
     margin-bottom: -2rem;
@@ -77,14 +72,6 @@ input {
 }
 
 .btn {
-    font-size: 1rem;
-    color: #FFFFFF;
-    background-color: #225777;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.88rem;
-    margin-top: 2.1rem;
-    padding: 0.7rem;
     width: 68vw;
 }
 }
