@@ -106,6 +106,7 @@ h1 {
 
   .ng-select.custom ::ng-deep .ng-select-container {
     height: 2.5rem;
+    line-height: 1.8rem;
   }
 
   .inputStyle {
