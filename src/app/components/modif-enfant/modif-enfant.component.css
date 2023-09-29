@@ -98,3 +98,37 @@ h2 {
 label {
   cursor: pointer;
 }
+
+@media (max-width: 48rem) {
+  .style-input {
+    width: 68vw;
+  }
+
+  .btnModele {
+    display: flex;
+    justify-content: center;
+    width: 68vw;
+  }
+
+  .box {
+    display: block;
+    overflow: auto;
+    width: 68vw;
+    height: 8rem;
+    padding: 0.5rem 0 0.9rem 0.9rem;
+    border-radius: 1.4rem;
+
+  }
+
+  .responsiveMobile {
+    text-wrap: balance;
+    width: 68vw;
+    text-align: center;
+  }
+
+  .position {
+    width: 15rem;
+    margin: 0;
+  }
+
+}
