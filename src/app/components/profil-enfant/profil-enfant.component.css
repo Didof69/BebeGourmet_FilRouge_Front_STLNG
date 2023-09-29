@@ -86,6 +86,7 @@ h1 {
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
+
 /* bouton retour */
 .btnModeleRed {
   border-radius: 2rem;
@@ -98,10 +99,12 @@ h1 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
+
 .btnModeleRed:hover {
   background-color: #d13017;
   box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
 }
+
 /* contenair pour info enfant */
 .contenair-profil {
   height: 100%;
@@ -121,8 +124,43 @@ h1 {
 
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
-    .tst {
-        margin-bottom: 0.5rem;
-        margin-top: 0.1rem;
-    }
+  .tst {
+    margin-bottom: 0.5rem;
+    margin-top: 0.1rem;
+  }
+
+  .btnModifier {
+    margin-right: 0rem;
+  }
+  .position {
+    margin-bottom: 0;
+    height: min-content;
+  }
+  .zoneProfil {
+    margin: 0;
+    overflow-y: auto;
+    height: 80vh;
+    z-index: 2;
+  }
+  .btnModeleRed {
+    margin: 0;
+  }
+  .zoneAvatar {
+    height: 12.5rem;
+  }
+  .contenair-profil {
+    height: 12.5rem;
+  }
+  .bouton {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .zoneViergeResponsive {
+    display: none;
+  }
+  h1 {
+    z-index: 2;
+  }
 }
