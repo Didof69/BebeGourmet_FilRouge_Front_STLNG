@@ -54,6 +54,7 @@ h2 {
   margin-top: 0.3rem;
 }
 
+/* supp du width  et margin-top, ajout margin-bot*/
 .btnModele {
   font-size: 1rem;
   color: #ffffff;
@@ -63,8 +64,33 @@ h2 {
   border-radius: 1.88rem;
   width: 12rem;
   height: 2.5rem;
-  margin-top: 1.5rem;
-  width: 50rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ajout de la class du bouton retour */
+.btnModele {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #225777;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btnModeleRed {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #982312;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 12rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
 }
 
 .checkbox-space {
@@ -75,6 +101,7 @@ label {
   cursor: pointer;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 48rem) {
   .style-input {
     width: 68vw;
@@ -93,18 +120,18 @@ label {
     height: 8rem;
     padding: 0.5rem 0 0.9rem 0.9rem;
     border-radius: 1.4rem;
-    
+
   }
 
   .responsiveMobile {
     text-wrap: balance;
-    width:68vw;
+    width: 68vw;
     text-align: center;
   }
 
   .position {
-      width: 15rem;
-      margin: 0;
+    width: 15rem;
+    margin: 0;
   }
 
 }
