@@ -1,55 +1,55 @@
 .filterbar {
-    width: 0;
-    overflow: hidden;
-    transition: width 0.5s;
-    position: relative;
-    top: 5rem;
-    left: 0;
+  position: absolute;
+  top: 8em;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+  z-index: 2;
 }
 
 .filterbar.open {
-    width: 14rem;
+  width: 14rem;
+  left: 2rem;
 }
 
 #btnFilterBarUtilisateur {
-    position: relative;
-    top: 5rem;
-    left: 0;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    height: 50vh;
-    width: 2rem;
-    background-color: #225777;
-    color: #fff;
-    border: none;
-    border-radius: 0 50% 50% 0;
-    cursor: pointer;
-    font-size: 1rem;
+  position: absolute;
+  top: 12rem;
+  left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 50vh;
+  width: 2rem;
+  background-color: #225777;
+  color: #fff;
+  border: none;
+  border-radius: 0 50% 50% 0;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 2;
 }
+
 #btnFilterBarUtilisateur:hover {
   background-color: #3b94cb;
   box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
 }
 
 #btnFilterBarEnfant {
-    position: absolute;
-    top: 20rem;
-    left: 0;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    height: 20vh;
-    width: 2rem;
-    background-color: #225777;
-    color: #fff;
-    border: none;
-    border-radius: 0 50% 50% 0;
-    cursor: pointer;
-    font-size: 1rem;
-    z-index: 2;
-}
-#btnFilterBarEnfant:hover {
-  background-color: #3b94cb;
-  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
+  position: absolute;
+  top: 20rem;
+  left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 20vh;
+  width: 2rem;
+  background-color: #225777;
+  color: #fff;
+  border: none;
+  border-radius: 0 50% 50% 0;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 2;
 }
 
 .accordion-body {
@@ -72,15 +72,15 @@ label {
 
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
-    #btnFilterBarEnfant {
-        top: 16rem;
-    }
+  #btnFilterBarEnfant {
+    top: 16rem;
+  }
 
-    #btnFilterBarUtilisateur{
-        top :10rem;
-    }
+  #btnFilterBarUtilisateur {
+    top: 10rem;
+  }
 
-    .filterbar {
-        top:4rem;
-    }
+  .filterbar {
+    top: 4rem;
+  }
 }
