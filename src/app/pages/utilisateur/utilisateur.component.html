@@ -3,7 +3,7 @@
   <div *ngIf="utilisateur" class="background">
     <app-profil-utilisateur [profil]="utilisateur"></app-profil-utilisateur>
     <div class="d-flex flex-wrap justify-content-center container-principal">
-      <div class="card-mobile">
+      <div class="card-mobile d-flex flex-wrap">
             <app-card-enfant
         *ngFor="let enfant of enfants"
         [enfant]="enfant"
