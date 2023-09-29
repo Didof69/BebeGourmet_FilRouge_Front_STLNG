@@ -78,14 +78,6 @@ input {
   }
 
 .btn {
-    font-size: 1rem;
-    color: #FFFFFF;
-    background-color: #225777;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.88rem;
-    margin-top: 2.1rem;
-    padding: 0.7rem;
     width: 68vw;
   }
 }
