@@ -21,6 +21,7 @@ h1 {
 
 .lowSize {
   font-size: small;
+  margin-left: 0.5rem;
 }
 
 .svg {
@@ -106,6 +107,7 @@ h1 {
 
   .ng-select.custom ::ng-deep .ng-select-container {
     height: 2.5rem;
+    line-height: 1.8rem;
   }
 
   .inputStyle {

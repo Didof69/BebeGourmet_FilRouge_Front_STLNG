@@ -83,4 +83,8 @@ label {
   .filterbar {
     top: 4rem;
   }
+
+  #btnFilterBarUtilisateur:hover {
+    background-color: #225777;
+  }
 }

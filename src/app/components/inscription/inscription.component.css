@@ -35,8 +35,8 @@ input {
 
 .emailKO {
   color: #982312;
-  margin-bottom: 0;
-  font-size: 0.8rem;
+  margin-bottom: -1rem;
+  font-size: 0.7rem;
   padding-left: 1rem;
 }
 
