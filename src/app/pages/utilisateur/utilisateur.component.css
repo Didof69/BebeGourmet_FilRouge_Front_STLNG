@@ -29,6 +29,6 @@
 
 @media (max-width: 48rem) {
     .card-mobile {
-        width: 23.8rem;
+        width: 100vw;
     }
 }

@@ -30,8 +30,8 @@ button {
     margin: 1rem;
 }
 
-@media (max-width: 48rem) {
-    .card-mobile {
-            width: 21.8rem;           
-        }
+@media (max-width: 48rem) {  
+    .card-enfant{
+        width: 21.5rem;
+    }
 }
