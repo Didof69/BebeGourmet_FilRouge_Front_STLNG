@@ -16,6 +16,7 @@ export class ConnexionComponent {
   };
 
   isFormValidate = false;
+  connexionKO = false;
 
   constructor(
     private utilisateurService: UtilisateurService,
@@ -32,6 +33,7 @@ export class ConnexionComponent {
           location.reload(); //recharge la page actuelle
         },
         error: (error) => {
+          this.connexionKO = true;
         },
       });
     }
