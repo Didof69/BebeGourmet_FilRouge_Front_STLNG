@@ -101,10 +101,6 @@ label {
   cursor: pointer;
 }
 
-.btnModele:hover {
-  background-color: #3b94cb;
-  box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
-}
 /* hover + shadow */
 .btnModeleRed:hover {
   background-color: #d13017;
@@ -115,43 +111,41 @@ label {
   background-color: #3b94cb;
   box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
 }
-/* hover + shadow */
-.btnModeleRed:hover {
-  background-color: #d13017;
-  box-shadow: 0rem 0rem 0rem 0.05rem #d13017;
-}
+
 
 /* MEDIA QUERIES */
 @media (max-width: 48rem) {
+
+  .mainContainer {
+     margin-top: 3.5rem;
+  }
   .style-input {
-    width: 68vw;
+    width: 90vw;
   }
 
-  .btnModele {
-    display: flex;
-    justify-content: center;
-    width: 68vw;
+  .marginBouton {
+    margin: 0;
+    margin-top: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    width: 60vw;
+    text-align: center;
+  }
+  
+  .btn {
+    width : 37.5vw;
   }
 
   .box {
     display: block;
     overflow: auto;
-    width: 68vw;
+    width: auto;
     height: 8rem;
-    padding: 0.5rem 0 0.9rem 0.9rem;
-    border-radius: 1.4rem;
-
-  }
-
-  .responsiveMobile {
-    text-wrap: balance;
-    width: 68vw;
-    text-align: center;
-  }
-
-  .position {
-    width: 15rem;
-    margin: 0;
+    border-radius: 1.88rem;
+    padding: 0.40rem 0.75rem 0.75rem 2.5rem;
+  
   }
 
 }
