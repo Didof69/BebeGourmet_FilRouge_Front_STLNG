@@ -1,8 +1,10 @@
 .mainContainer {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding-top: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    text-align: center;
 }
 
 .card {
@@ -22,15 +24,14 @@ h2 {
 }
 
 #btnSupprimer {
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #225777;
-  border: none;
-  cursor: pointer;
-  border-radius: 1.88rem;
-  width: 12rem;
-  height: 2.5rem;
-  margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #225777;
+    border: none;
+    cursor: pointer;
+    border-radius: 1.88rem;
+    width: 12rem;
+    height: 2.5rem;
 }
 
 .btnAnnuler {
