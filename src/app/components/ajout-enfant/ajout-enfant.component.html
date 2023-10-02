@@ -26,29 +26,31 @@
       />
     </div>
 
-    <div style="text-align: center;">
-      <p style=" margin-bottom: 0;">Allergies ou Restrictions ?</p>
-    </div>
+    <div *ngIf="statutCreation">
+      <div style="text-align: center">
+        <p style="margin-bottom: 0">Allergies ou Restrictions ?</p>
+      </div>
 
-    <div class="box shadow-sm">
-      <div *ngFor="let restrict of restrictionsTab" class="position">
-        <input
-          type="checkbox"
-          value="{{ restrict | json }}"
-          [id]="restrict.libelle"
-          (change)="onChangeRestric($event)"
-          class="width-check"
-        />
-        <label class="checkbox-space" [for]="restrict.libelle">{{
-          restrict.libelle
-        }}</label>
+      <div class="box shadow-sm">
+        <div *ngFor="let restrict of restrictionsTab" class="position">
+          <input
+            type="checkbox"
+            value="{{ restrict | json }}"
+            [id]="restrict.libelle"
+            (change)="onChangeRestric($event)"
+            class="width-check"
+          />
+          <label class="checkbox-space" [for]="restrict.libelle">{{
+            restrict.libelle
+          }}</label>
+        </div>
       </div>
     </div>
-    <!--Ajout d'une div pour rassembler les 2 boutons avec class btstrap, 
-      remplacement du bouton confimer pour coorelation avec les autres (class nom etc...),
-       et ajout du bouton retour avec routerlink
-      modif btstrap center-->
-    <div class="form-group d-flex justify-content-center marginBouton">
+
+    <div
+      *ngIf="statutCreation"
+      class="form-group d-flex justify-content-center marginBouton"
+    >
       <button type="submit" class="btn btn-primary btnModele">Confirmer</button>
 
       <button
@@ -58,6 +60,23 @@
       >
         Retour
       </button>
+    </div>
+
+    <div *ngIf="!statutCreation">
+      <div class="box boxCreationKO shadow-sm">
+        <p class="texte-creationKO">La diversification alimentaire se fait à partir de 4 mois. Jusqu'à cet âge, Bébé ne boit que du lait maternel ou maternisé.</p>
+        <p class="texte-creationKO">Merci de créer son profil quand il sera âgé 4 mois. 😊</p>
+      </div>
+
+      <div class="form-group d-flex justify-content-center">
+        <button
+          [routerLink]="'/profil-utilisateur'"
+          type="button"
+          class="btn btn-color btn-block btnModeleRed btnModeleRedKO"
+        >
+          Retour
+        </button>
+      </div>
     </div>
   </form>
 </div>

@@ -12,7 +12,7 @@ import { UtilisateurService } from 'src/app/services/utilisateur.service';
 })
 export class AjoutEnfantComponent {
   restrictionsTab!: Restriction[];
-  // enfant!: Enfant;
+
   enfant: Enfant = {
     prenom: '',
     date_naissance: new Date(),
@@ -20,16 +20,12 @@ export class AjoutEnfantComponent {
     restrictions: [],
   };
 
-  // testRestrictions = [
-  //   { id: 1, libelle: 'ouou' },
-  //   { id: 2, libelle: 'ouou' },
-  //   { id: 3, libelle: 'ouou' },
-  // ];
-
   checkedRestrictions: Restriction[] = [];
 
+  statutCreation = true;
+  
   constructor(
-    private router : Router,
+    private router: Router,
     private utilisateurService: UtilisateurService,
     private restrictionService: RestrictionService // private enfantService: EnfantService
   ) {}
@@ -38,14 +34,12 @@ export class AjoutEnfantComponent {
     this.restrictionService.getRestrictions().subscribe((data) => {
       this.restrictionsTab = data;
     });
-    
   }
 
   onChangeRestric(e: Event) {
     const target = e.target as HTMLInputElement;
     const infoChecked = JSON.parse(target.value);
     if (target.checked) {
-
       if (this.checkedRestrictions.length === this.restrictionsTab.length) {
         this.checkedRestrictions = [];
         this.checkedRestrictions.push(infoChecked);
@@ -62,17 +56,19 @@ export class AjoutEnfantComponent {
       }
     }
   }
-
   // Ajouter la restriction au tableau si on coche la checkbox
   // Enlever la restriction du tableau si on décoche la checkbox
   // Affiche le table de restriction cochées
+
   ajoutEnfant() {
     this.enfant.restrictions = this.checkedRestrictions;
     this.utilisateurService.addEnfantByUser(this.enfant).subscribe({
       next: (response) => {
-       this.router.navigate([`/profil-utilisateur`])
+        this.router.navigate([`/profil-utilisateur`]);
       },
       error: (error) => {
+        this.statutCreation = false
+        console.log(this.statutCreation);
       },
     });
   }

@@ -59,6 +59,7 @@ h2 {
 
   margin-top: 0.3rem;
 }
+
 /* changement du nom des class liées au bouton confirmer */
 .btnModele {
   font-size: 1rem;
@@ -71,6 +72,7 @@ h2 {
   height: 2.5rem;
   margin-bottom: 0.5rem;
 }
+
 /* ajout de la class du bouton retour */
 .btnModeleRed {
   font-size: 1rem;
@@ -85,6 +87,16 @@ h2 {
   margin-left: 2rem;
 }
 
+.btnModeleRedKO {
+  margin-left: 0;
+  margin-top: 1.5rem;
+}
+
+.texte-creationKO {
+  text-align: center;
+  margin: auto;
+}
+
 .checkbox-space {
   margin-left: 1rem;
 }
@@ -92,11 +104,13 @@ h2 {
 label {
   cursor: pointer;
 }
+
 /* hover + shadow */
 .btnModele:hover {
   background-color: #3b94cb;
   box-shadow: 0rem 0rem 0rem 0.05rem #3b94cb;
 }
+
 /* hover + shadow */
 .btnModeleRed:hover {
   background-color: #d13017;
@@ -104,8 +118,8 @@ label {
 }
 
 .marginBouton {
-    margin: 1.5rem;
-  }
+  margin: 1.5rem;
+}
 
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
@@ -113,7 +127,7 @@ label {
     width: 90vw;
   }
 
-  h1{
+  h1 {
     margin-bottom: 1.4rem;
   }
 
@@ -123,7 +137,7 @@ label {
   }
 
   .btn {
-    width : 37.5vw;
+    width: 37.5vw;
   }
 
   .box {
@@ -133,6 +147,13 @@ label {
     height: 8rem;
     border-radius: 1.88rem;
     padding: 0.40rem 0.75rem 0.75rem 2.5rem;
+  }
+
+  .boxCreationKO {
+    width: 90vw;
+    height: 9rem;
+    padding: 1.4rem 0.75rem 0.4rem 0.6rem;
+    line-height: 1.2rem;
   }
 
 }
