@@ -1,4 +1,4 @@
-# Front_BB_Gourmet
+# Front Bébé Gourmet
 
 ## Etape 1 : lancer un nouveau projet angular :
 ```bash
@@ -70,10 +70,15 @@ import { FormsModule } from '@angular/forms';
 
 ```
 ## Dans le angularjson, ajouter styles:
-````
+```
 "styles": [
           "node_modules/@ng-select/ng-select/themes/default.theme.css",
           "node_modules/bootstrap/dist/css/bootstrap.min.css",
           "src/styles.css"
        ],
-``
+```
+
+# BACKEND :
+Dispo sur Github
+- API : https://github.com/Didof69/BebeGourmet_FilRouge_API_STLNG
+- BDD : https://github.com/Didof69/BebeGourmet_FilRouge_BDD_STLNG
