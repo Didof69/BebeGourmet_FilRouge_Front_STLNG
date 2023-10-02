@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { Enfant } from 'src/app/models/enfant';
 
 @Component({
@@ -6,7 +6,7 @@ import { Enfant } from 'src/app/models/enfant';
   templateUrl: './filter-bar.component.html',
   styleUrls: ['./filter-bar.component.css'],
 })
-export class FilterBarComponent {
+export class FilterBarComponent implements OnInit{
   @Input() enfant!: Enfant;
   @Input() tabCategories!: Array<string>;
   @Input() tabAges!: Array<number>;
@@ -22,6 +22,18 @@ export class FilterBarComponent {
   toggleFilterbar() {
     this.isFilterbarOpen = !this.isFilterbarOpen;
   }
+  //
+
+  //passage au texte "filtre" de la filter bar en responsive
+
+  isLargeScreen: boolean = true;
+  checkIfMobile() {
+  this.isLargeScreen = window.innerWidth >= 768; // Vous pouvez ajuster la largeur limite pour le mobile
+  }
+  ngOnInit() {
+  this.checkIfMobile();
+}
+
   //
 
   categorieFiltre: string[] = [];
@@ -137,4 +149,14 @@ export class FilterBarComponent {
 
     this.newSaisonEvent.emit(this.saisonFiltre);
   }
+@HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  // Fonction pour vérifier la taille de l'écran
+  checkScreenSize() {
+    this.isLargeScreen = window.innerWidth >= 768; // Définissez la largeur minimale de l'écran pour considérer comme "grand écran"
+  }
+
 }
