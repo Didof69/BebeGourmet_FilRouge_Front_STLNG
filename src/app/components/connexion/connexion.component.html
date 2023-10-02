@@ -35,9 +35,9 @@
         class="form-control shadow-sm"
         [(ngModel)]="utilisateur.mot_de_passe"
         name="mot_de_passe"
-        #password="ngModel"
+        #password="ngModel"        
         [class.input-error]="password.invalid && isFormValidate"
-        [class.input-error]="connexionKO"
+        [class.input-error-email]="connexionKO"
         placeholder="Mot de passe"
       />
       <div *ngIf="password.invalid && isFormValidate" class="alert">

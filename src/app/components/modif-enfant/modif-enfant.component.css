@@ -127,6 +127,10 @@ label {
     width: 90vw;
   }
 
+  .input-date{
+    margin-bottom: 0.3rem;
+  }
+
   .marginBouton {
     display: flex;
     justify-content: space-between;
@@ -147,7 +151,7 @@ label {
     overflow: auto;
     width: 90vw;
     height: 8rem;
-    margin: 0.8rem;
+    margin: 0.3rem 0.8rem 0.8rem 0.8rem;
     border-radius: 1.88rem;
     padding: 0.40rem 0.75rem 0.75rem 2.5rem;
   

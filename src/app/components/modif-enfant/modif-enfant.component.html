@@ -19,10 +19,14 @@
       <input
         [(ngModel)]="enfant.date_naissance"
         type="date"
-        class="form-control shadow-sm style-input"
+        class="form-control shadow-sm style-input input-date"
         name="date_naissance"
         readonly
       />
+    </div>
+
+    <div style="text-align: center">
+      <p style="margin-bottom: 0">Allergies ou Restrictions ?</p>
     </div>
 
     <div class="box shadow-sm">
@@ -44,7 +48,7 @@
       remplacement du bouton confimer pour coorelation avec les autres (class nom etc...),
        et ajout du bouton retour avec routerlink,
      modif btstrap center-->
-    <div class="form-group  d-flex justify-content-center marginBouton">
+    <div class="form-group d-flex justify-content-center marginBouton">
       <button type="submit" class="btn btn-primary btnModele">Confirmer</button>
 
       <button
