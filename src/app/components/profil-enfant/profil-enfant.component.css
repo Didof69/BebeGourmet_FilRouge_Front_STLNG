@@ -8,6 +8,9 @@
   align-self: flex-end;
   margin: 1.25rem;
 }
+.contenair-profil {
+  width: 50%;
+}
 
 .zoneVierge {
   width: 14rem;

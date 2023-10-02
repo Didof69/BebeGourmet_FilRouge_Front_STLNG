@@ -5,7 +5,6 @@
     </div>
 
     <div class="accordion" id="accordionExample">
-
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingCategorie">
           <button
@@ -153,7 +152,27 @@
     </div>
   </div>
 
-  <button *ngIf="enfant != undefined" id="btnFilterBarEnfant" (click)="toggleFilterbar()">></button>
+  <button
+    *ngIf="enfant != undefined"
+    id="btnFilterBarEnfant"
+    (click)="toggleFilterbar()"
+  >
+    <p class="vertical">
+      {{
+        isLargeScreen ? (isFilterbarOpen ? "&#8656;" : "&#8658;") : "FILTRES"
+      }}
+    </p>
+  </button>
 
-  <button *ngIf="enfant == undefined" id="btnFilterBarUtilisateur" (click)="toggleFilterbar()">></button>
+  <button
+    *ngIf="enfant == undefined"
+    id="btnFilterBarUtilisateur"
+    (click)="toggleFilterbar()"
+  >
+    <p class="vertical">
+      {{
+        isLargeScreen ? (isFilterbarOpen ? "&#8656;" : "&#8658;") : "FILTRES"
+      }}
+    </p>
+  </button>
 </div>
