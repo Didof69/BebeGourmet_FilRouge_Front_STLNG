@@ -45,7 +45,6 @@ export class InscriptionComponent {
           },
           error: (error) => {
             this.inscriptionOK = false;
-            console.log(this.inscriptionOK);
           },
         });
     }

@@ -68,7 +68,6 @@ export class AjoutEnfantComponent {
       },
       error: (error) => {
         this.statutCreation = false
-        console.log(this.statutCreation);
       },
     });
   }
