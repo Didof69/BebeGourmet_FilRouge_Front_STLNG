@@ -23,8 +23,6 @@ export class AlimentService {
   }
 
   createAliment(aliment: CreateAliment): Observable<Aliment> {
-    // recup le token dans le sessionstorage
-    // const headers = this.setHeaders();
     const headers = this.setHeaders();
     return this.http.post<Aliment>(
       `http://localhost:3000/api/aliments`,
