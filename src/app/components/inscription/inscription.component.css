@@ -57,7 +57,7 @@ input {
   border: none;
   cursor: pointer;
   border-radius: 1.88rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 0.7rem;
   width: 60vw;
 }
@@ -90,7 +90,7 @@ input {
 
   .btn {
     width: 68vw;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
 
   .btn:hover {

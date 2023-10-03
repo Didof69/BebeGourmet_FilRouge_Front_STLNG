@@ -15,7 +15,7 @@
         #email="ngModel"
         [class.input-error]="email.invalid && isFormValidate"
         [class.input-error-log]="connexionKO"
-        placeholder="Email"
+        placeholder="example@email.fr"
       />
       <div *ngIf="email.invalid && isFormValidate" class="alert">
         <div *ngIf="email.errors?.['required']">L'email est obligatoire.</div>

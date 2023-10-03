@@ -51,7 +51,7 @@
         [class.input-error-email]="!inscriptionOK"
         [class.input-error]="email.invalid && isFormSubmit"
 
-        placeholder="Email"
+        placeholder="example@email.fr"
       />
       <div *ngIf="email.invalid && isFormSubmit" class="alert">
         <div *ngIf="email.errors?.['required']">L'email est obligatoire.</div>
@@ -74,7 +74,7 @@
         name="mot_de_passe"
         #password="ngModel"
         [class.input-error]="password.invalid && isFormSubmit"
-        placeholder="Mot de passe"
+        placeholder="Mot de passe *"
       />
       <div *ngIf="password.invalid && isFormSubmit" class="alert">
         <div *ngIf="password.errors?.['required']">
@@ -100,6 +100,9 @@
         "
         placeholder="Confirmez votre mot de passe"
       />
+      <div>
+        <p style="font-size: 0.6rem; padding-left: 0.3rem; margin-bottom: 0;">*12 caract. mini dont 1 maj., 1 chiffre et 1 symbole</p>
+      </div>
       <div
         *ngIf="
           utilisateur.mot_de_passe !== utilisateur.mot_de_passe_confirme &&
