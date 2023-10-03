@@ -87,3 +87,10 @@ input {
     background-color: #225777;
   }
 }
+
+
+@media (min-width: 60rem) {
+  .mainContainer {
+    margin-top: 8rem;
+  }
+}

@@ -121,13 +121,14 @@ label {
 @media (max-width: 48rem) {
 
   .mainContainer {
-     margin-top: 3.5rem;
+    margin-top: 3.5rem;
   }
+
   .style-input {
     width: 90vw;
   }
 
-  .input-date{
+  .input-date {
     margin-bottom: 0.3rem;
   }
 
@@ -141,9 +142,9 @@ label {
     width: 60vw;
     text-align: center;
   }
-  
+
   .btn {
-    width : 37.5vw;
+    width: 37.5vw;
   }
 
   .box {
@@ -154,7 +155,11 @@ label {
     margin: 0.3rem 0.8rem 0.8rem 0.8rem;
     border-radius: 1.88rem;
     padding: 0.40rem 0.75rem 0.75rem 2.5rem;
-  
   }
-
 }
+
+  @media (min-width: 60rem) {
+    .mainContainer {
+      margin-top: 8rem;
+    }
+  }

@@ -21,7 +21,7 @@ input {
   width: 60vw;
 }
 
-#nameInput{
+#nameInput {
   margin-top: 0;
 }
 
@@ -95,5 +95,12 @@ input {
 
   .btn:hover {
     background-color: #225777;
+  }
+}
+
+
+@media (min-width: 60rem) {
+  .mainContainer {
+    margin-top: 8rem;
   }
 }
