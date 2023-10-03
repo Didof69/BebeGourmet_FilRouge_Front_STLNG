@@ -158,7 +158,7 @@ label {
   }
 }
 
-  @media (min-width: 60rem) {
+  @media (min-width: 100rem) {
     .mainContainer {
       margin-top: 8rem;
     }

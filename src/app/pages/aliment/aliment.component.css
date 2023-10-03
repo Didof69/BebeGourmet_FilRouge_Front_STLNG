@@ -6,7 +6,7 @@
 }
 
 
-@media (min-width: 60rem) {
+@media (min-width: 100rem) {
     .background {
         height: 90vh;
     }

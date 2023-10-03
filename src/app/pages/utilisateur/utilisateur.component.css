@@ -33,7 +33,7 @@
     }
 }
 
-@media only screen and (min-width: 60rem) {
+@media only screen and (min-width: 100rem) {
     .background {
         height: 85vh;
     }
