@@ -9,8 +9,10 @@
 }
 
 .filterbar.open {
-  width: 14rem;
+  width: 16rem;
   left: 2rem;
+  max-height: 29.5rem;
+  overflow: auto;
 }
 
 #btnFilterBarUtilisateur {
@@ -54,8 +56,6 @@
 
 .accordion-body {
   height: 1rem;
-  display: flex;
-  align-items: center;
 }
 
 label {
@@ -82,7 +82,7 @@ label {
   }
 
   .filterbar {
-    top: 4rem;
+    top: 10rem;
   }
 
   #btnFilterBarUtilisateur:hover {
@@ -97,5 +97,10 @@ label {
    letter-spacing: -0.2rem;
    text-align: center;
    color:rgb(237,228,223);
+  }
+
+  .filterbar.open{
+    max-height: 22.5rem;
+    overflow: auto;
   }
 }
